@@ -114,7 +114,7 @@ Use the following steps to configure your Android device:
      		  "text": "On your device, tap the system Settings icon."
      		},{
           "@type": "HowToStep",
-          "position": "2",Tap Accounts & sync (Accounts on some devices)."
+          "position": "2",Tap Accounts & sync."
      		},{
           "@type": "HowToStep",
           "position": "3",Tap **Add**."
