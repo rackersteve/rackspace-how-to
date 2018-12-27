@@ -114,10 +114,12 @@ Use the following steps to configure your Android device:
      		  "text": "On your device, tap the system Settings icon."
      		},{
           "@type": "HowToStep",
-          "position": "2",Tap Accounts & sync."
+          "position": "2",
+          "text": "Tap Accounts & sync."
      		},{
           "@type": "HowToStep",
-          "position": "3",Tap **Add**."
+          "position": "3",
+          "text": "Tap Add."
           }]
     }]}
 </script>
