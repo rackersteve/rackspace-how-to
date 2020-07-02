@@ -1,0 +1,204 @@
+---
+permalink: nova-agent-troubleshooting/
+audit_date: '2020-07-02'
+title: 'nova-agent-troubleshooting'
+type: article
+created_date: '2020-07-02'
+created_by: Brian Abshier & Chris Silva
+last_modified_date: '2020-07-02'
+last_modified_by: Brian Abshier & Chris Silva
+product: Cloud Servers
+product_url: cloud-servers
+---
+
+This article goes over the `nova-agent` service on Linux servers in Rackspace Cloud. On Windows servers, this same service is called `Rackspace Cloud Server Agent`.
+ 
+
+## What is Nova-agent?
+  
+Nova-agent is a vital service for all virtualized servers in Rackspace public cloud. While a cloud server is operational, nova-agent provides a means of interacting with the server through the API or the Cloud Control Panel. Nova-agent enables components outside the server to control the server by sending messages through the XenStore file system. For example, when an authorized user of the Cloud Control Panel sends the server a request to reset its password, the Cloud Control Panel writes the request to XenStore; nova-agent then reads from XenStore and informs the server.
+  
+
+## How does `nova-agent` affect my server?
+  
+
+When a cloud server is initialized, nova-agent performs startup functions such as configuring the server's network, establishing its hostname, and setting its root or admin passwords.
+  
+
+Normal operation of a cloud server requires nova-agent to remain active. Disabling or removing nova-agent can result in issues with the server interfacing with the host environment. We do not recommend removing or disabling the service on your server. 
+  
+
+## `nova-agent` Dependencies
+
+Nova-agent relies on another service being started and running on the server first, xe-linux-distribution (in some operating systems it is called xe-daemon.) This service is responsible for allowing the VM to communicate with the hypervisor via xenstore. The xe-linux-distribution service is provided by the xe-guest-utilities package, which is installed by default on all Linux servers on the Rackspace Cloud. Because nova-agent relies on xenstore to function, it is important to make sure that xe-linux-distribution starts **BEFORE** the nova-agent service.
+
+On Windows server's the dependency is known as 'Citrix Xen Windows Guest Agent'. This service performs the same duties as the xe-daemon/xe-linux-distribution does for the Linux server. This service also comes installed, and set to start automatically, by default on all base Windows images.
+
+
+## How is my server affected if `nova-agent` is broken or missing?
+
+
+Without the `nova-agent` service running on your server, the following issues will occur.
+
+
+- Unable to reset the root/Administrator password through your portal.
+
+- Unable to add or remove networks or set proper IPs or routes
+
+- No Red Hat Enterprise Linux registration or Windows Activation
+
+  
+**Note**: New servers created from a Cloud Image without `nova-agent` will result in build failures. The server will complete the build process, but it will have broken networking and root/Administrator password issues. The best solution for this kind of issue is to fix `nova-agent` on the source server, take a new image, and use the new image to build your server.
+
+
+## Checking `nova-agent` status
+
+  
+In order to make sure that nova-agent is running on your server, you can run the following command:
+
+  
+### RHEL 6, CentOS 6
+
+      service nova-agent status
+ 
+
+### RHEL 7, CentOS 7
+
+
+      systemctl status nova-agent
+  
+
+### Debian Based Distributions
+
+
+       systemctl statuus python3-nova-agent
+
+  
+
+You can also verify the process is running on all OS versions with the following command:
+
+
+       ps aux | grep -i nova-agent
+ 
+  
+
+### Windows Servers
+ 
+
+1. Open your Server Manager within Windows
+
+2. Select Tools
+
+3. Select Services
+
+4. Right click the `Rackspace Cloud Server Agent` service and choose Start.
+
+  
+## Starting and enabling `nova-agent`
+Is the service is not started, you will need to start the service and enable the service on boot as seen below:
+
+
+### RHEL 6 and CentOS 6
+  
+
+       chkconfig nova-agent on
+  
+
+### RHEL 7 and CentOS 7
+  
+
+       systemctl enable nova-agent
+ 
+
+### Debian based distributions
+  
+
+      systemctl enable python3-nova-agent
+
+  
+
+### Windows Servers
+  
+
+1. Open your Server Manager within Windows
+
+2. Select Tools
+
+3. Select Services
+
+4. Right click the `Rackspace Cloud Server Agent` service and choose `Properties`.
+
+5. Change the 'Startup Type' to Automatic and click Apply/OK.
+
+  
+## Rescue Mode troubleshooting
+ 
+
+As noted above, the nova-agent is responsible for managing password changes. If you are not able to access your server after changing the password, the nova-agent service may be stopped.
+
+
+If you are unable to access your server, it will be necessary to enter Rescue Mode and troubleshoot. For more information *Rescue Mode*, see this link: [[https://support.rackspace.com/how-to/rescue-mode/](https://support.rackspace.com/how-to/rescue-mode/)]([https://support.rackspace.com/how-to/rescue-mode/)](https://support.rackspace.com/how-to/rescue-mode/))
+
+### Rescue Mode on a Linux Server  
+  
+
+Once you've booted the server in Rescue Mode and logged into the server, use the following commands to change the root password and enable nova-agent.
+ 
+
+1. Make a temporary directory by running the following command:
+
+
+        mkdir /mnt/rescue
+ 
+
+2. Mount the filesystem to the temporary directory by running the following comamands:
+ 
+        mount /dev/xvdb1 /mnt/rescue
+        chroot /mnt/rescue
+
+
+3. Run the passwd command to change the root password by running the following command: 
+
+        passwd
+
+
+This will ask for a new password twice and updates the server's password.
+
+  
+4. Enable the `nova-agent` service by running the following command
+
+
+-  RHEL 6 or CentOS 6 based distributions
+
+        chkconfig nova-agent on
+
+  
+- RHEL7 or CentOS 7 based distributions
+  
+        systemctl enable nova-agent
+ 
+
+- Debian based distributions
+
+        systemctl enable python3-nova-agent
+
+
+**Note**: Older/Unsupported versions of Debian based operating systems may refer to the service as *nova-agent*. Please note that for best security practices, if an operating system has reached EOL, we strongly recommend migrating to a server with a newer operating system.
+
+
+5. Exit out of `chroot` mode by running the following command:
+
+        exit
+
+  
+6. Unmount the temporary filesystem by running the following command:
+
+        umount /mnt/rescue
+
+  
+At this point, you can disconnect from the server and exit Rescue Mode. Upon rebooting the server, you should now be able to access the server via the password created in the steps above. Additionally, the nova-agent service should be running on the server. You can verify the service is running as shown in the previous section.
+
+
+### Rescue Mode on a Windows Server
+
+Rescue mode on a Windows server functions differently than a Linux server. On a Windows server, a rescue server is created and you are given access to your filesystem so that you can access your data, but you cannot modify your server's system configuration. This means you cannot set the `Rackspace Cloud Server Agent` to start automatically from within `Rescue Mode`. If you've locked yourself out of your Administrator account, and have no other accounts which you are able to use to connect over RDP or the Emergency Console, please contact Rackspace support. 
