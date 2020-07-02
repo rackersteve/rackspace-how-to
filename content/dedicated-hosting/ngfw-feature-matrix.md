@@ -115,12 +115,12 @@ product_url: dedicated-hosting
     <td><b>Geo Fencing</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td><b>Geo Fencing</b> *updates included with any advanced license</td>
+    <td><b>Geo Fencing</b> *included with Threat Prevention License</td>
   </tr>
   <tr>
     <td><div align="right">Anti-Virus</div></td>
     <td style="background-color: green;color:white;"><b>Supported (Default template)</b></td>
-    <td style="background-color: yellow;"><b>Roadmap item</b></td>
+    <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td><b>Umbrella</td>
   </tr>
   <tr>
