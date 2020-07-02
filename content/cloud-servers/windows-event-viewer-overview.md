@@ -3,7 +3,7 @@ permalink: windows-event-viewer-overview/
 audit_date: '2020-6-18'
 title: 'Windows Event Viewer overview'
 type: article
-created_date: '2020-6-16'
+created_date: '2020-06-16'
 created_by: Richard Daugherty
 last_modified_date: '2020-6-18'
 last_modified_by: Cat Lookabaugh
