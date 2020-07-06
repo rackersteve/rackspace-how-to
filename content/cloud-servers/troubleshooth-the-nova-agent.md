@@ -1,7 +1,7 @@
 ---
-permalink: nova-agent-troubleshooting/
+permalink: troubleshoot-the-nova-agent/
 audit_date: '2020-07-06'
-title: 'nova-agent-troubleshooting'
+title: 'Troubleshoot the nova-agent'
 type: article
 created_date: '2020-07-02'
 created_by: Chris Silva
@@ -14,31 +14,31 @@ product_url: cloud-servers
 This article describes the `nova-agent` service on Linux&reg; servers in Rackspace Cloud. On Windows&reg; servers,
 this same service is called `Rackspace Cloud Server Agent`. 
 
-### What is Nova-agent?
+### What is `nova-agent`?
   
-Nova-agent is a vital service for all virtualized servers in the Rackspace public cloud. While a cloud server is
-operational, nova-agent provides a way to interact with the server through the API or the Cloud Control Panel.
-Nova-agent enables components outside the server to control the server by sending messages through the Xen&reg; XenStore
+`nova-agent` is a vital service for all virtualized servers in the Rackspace public cloud. While a cloud server is
+operational, `nova-agent` provides a way to interact with the server through the API or the Cloud Control Panel.
+`nova-agent` enables components outside the server to control the server by sending messages through the Xen&reg; XenStore
 file system. For example, when an authorized user of the Cloud Control Panel sends the server a request to reset a
-password, the Cloud Control Panel writes the request to XenStore, and nova-agent then reads from XenStore and informs
+password, the Cloud Control Panel writes the request to XenStore, and `nova-agent` then reads from XenStore and informs
 the server.
 
 ### How does `nova-agent` affect my server?
   
-When you initialize a cloud server, nova-agent performs startup functions such as configuring the server's network,
+When you initialize a cloud server, `nova-agent` performs startup functions such as configuring the server's network,
 establishing its hostname, and setting its root or admin passwords.
 
-Normal operation of a cloud server requires nova-agent to remain active. Disabling or removing nova-agent can result
+Normal operation of a cloud server requires `nova-agent` to remain active. Disabling or removing `nova-agent` can result
 in issues with the server interfacing with the host environment. We do not recommend removing or disabling the service
 on your server. 
 
-### Nova-agent dependencies
+### `nova-agent` dependencies
 
-Nova-agent relies on another service being started and running on the server first, **xe-linux-distribution** (in some
+`nova-agent` relies on another service being started and running on the server first, **xe-linux-distribution** (in some
 operating systems it is called **xe-daemon**.) This service is responsible for allowing the virtual machine (VM) to
-communicate with the hypervisor via XenStore. The xe-guest-utilities package, which is installed by default on all Linux
-servers on the Rackspace Cloud, provides the xe-linux-distribution service. Because nova-agent relies on XenStore to
-function, you should make sure that xe-linux-distribution starts *before* the nova-agent service.
+communicate with the hypervisor via XenStore. The **xe-guest-utilities** package, which is installed by default on all Linux
+servers on the Rackspace Cloud, provides the **xe-linux-distribution** service. Because `nova-agent` relies on XenStore to
+function, you should make sure that **xe-linux-distribution** starts *before* the `nova-agent` service.
 
 On Windows servers, the dependency is known as **Citrix Xen Windows Guest Agent**. This service performs the same duties
 as the **xe-linux-distribution** does for a Linux server. This service also comes installed, and starts automatically, by
@@ -52,7 +52,7 @@ Without the `nova-agent` service running on your server, the following issues oc
 
 - Unable to add or remove networks or set proper IPs or routes
 
-- No Red Hat Enterprise Linux registration or Windows Activation
+- No Red Hat&reg; Enterprise Linux&reg; registration or Windows Activation
 
   
 **Note**: New servers created from a Cloud Image without `nova-agent` result in build failures. The server
@@ -62,10 +62,10 @@ build your server.
 
 ### Check the `nova-agent` status on Linux servers
 
-To make sure that nova-agent is running on your Linux server, run one of the following commands:
+To make sure that `nova-agent` is running on your Linux server, run one of the following commands:
 
   
-- **Red Hat® Enterprise Linux® 6, CentOS® 6**:
+- **Red Hat Enterprise Linux 6, CentOS® 6**:
 
          service nova-agent status
  
@@ -127,8 +127,8 @@ To start and enable the `Rackspace Cloud Server Agent` on Windows servers, perfo
   
 ### Rescue mode troubleshooting
 
-As noted above, the nova-agent is responsible for managing password changes. If you can't access your server
-after changing the password, the nova-agent service might be stopped.
+As noted above, the `nova-agent` is responsible for managing password changes. If you can't access your server
+after changing the password, the `nova-agent` service might be stopped.
 
 If you can't access your server, you need to enter Rescue Mode and troubleshoot. See 
 [Rescue Mode](https://support.rackspace.com/how-to/rescue-mode/) for more information.
@@ -178,7 +178,7 @@ password and enable nova-agent:
         umount /mnt/rescue
   
 At this point, you can disconnect from the server and exit Rescue Mode. Upon rebooting the server, you should
-now be able to access the server via the password created in the preceding steps. Additionally, the nova-agent
+now be able to access the server via the password created in the preceding steps. Additionally, the `nova-agent`
 service should be running on the server. You can verify the service is running as shown in the previous section.
 
 ### Rescue Mode on a Windows Server
