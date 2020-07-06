@@ -4,7 +4,7 @@ audit_date: '2020-07-06'
 title: 'Troubleshoot nova-agent or Rackspace Cloud Server Agent'
 type: article
 created_date: '2020-07-02'
-created_by: Chris Silva
+created_by: Chris Silva, Brian Abshier
 last_modified_date: '2020-07-06'
 last_modified_by: Cat Lookabaugh
 product: Cloud Servers
