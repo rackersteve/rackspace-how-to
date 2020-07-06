@@ -1,7 +1,7 @@
 ---
-permalink: troubleshoot-the-nova-agent/
+permalink: troubleshoot-nova-agent/
 audit_date: '2020-07-06'
-title: 'Troubleshoot the nova-agent'
+title: 'Troubleshoot nova-agent'
 type: article
 created_date: '2020-07-02'
 created_by: Chris Silva
