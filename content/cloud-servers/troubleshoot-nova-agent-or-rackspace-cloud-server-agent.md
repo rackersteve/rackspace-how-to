@@ -1,7 +1,7 @@
 ---
-permalink: troubleshoot-nova-agent/
+permalink: troubleshoot-nova-agent-or-rackspace-cloud-server-agent/
 audit_date: '2020-07-06'
-title: 'Troubleshoot nova-agent'
+title: 'Troubleshoot nova-agent or Rackspace Cloud Server Agent'
 type: article
 created_date: '2020-07-02'
 created_by: Chris Silva
@@ -11,8 +11,8 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
-This article describes the `nova-agent` service on Linux&reg; servers in Rackspace Cloud. On Windows&reg; servers,
-this same service is called `Rackspace Cloud Server Agent`. 
+This article describes the `nova-agent` service on Linux&reg; servers and `Rackspace Cloud Server Agent` on
+Windows&reg;. 
 
 ### What is `nova-agent`?
   
@@ -155,15 +155,15 @@ password and enable nova-agent:
 
    - **Red Hat Enterprise Linux 6 and CentOS 6**:
 
-        chkconfig nova-agent on
+         chkconfig nova-agent on
   
-  - **Red Hat Enterprise Linux 7 and CentOS 7**:
+   - **Red Hat Enterprise Linux 7 and CentOS 7**:
 
-        systemctl enable nova-agent
+         systemctl enable nova-agent
  
-  - **Debian-based distributions**:
+   - **Debian-based distributions**:
 
-        systemctl enable python3-nova-agent
+         systemctl enable python3-nova-agent
 
     **Note**: Older and unsupported versions of Debian-based operating systems might refer to the service as 
     *nova-agent*. As a best security practices, if an operating system has reached end-of-life (EOL), we strongly
