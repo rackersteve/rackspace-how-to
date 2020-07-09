@@ -1,7 +1,7 @@
 ---
 permalink: android-outlook-setup-o365/
 audit_date: '2020-07-09'
-title: How to setup your Office 365 mailbox in the Outlook for Android mobile application
+title: Set up your Office 365 mailbox in the Outlook for Android mobile application
 type: article
 created_date: '2020-07-07'
 created_by: Nicholas Ramirez
@@ -76,7 +76,7 @@ the Outlook for Android mobile application:
 
 2. When you try to configure an Office 365 user that has multi-factor authentication (MFA) enabled, the Outlook mobile
    application asks you for the default MFA verification method to proceed when signing in. You don't need to generate
-   a password for use with the Outlook mobile application.
+   an app password for use with the Outlook mobile application.
 
 3. To access folders other than the **Inbox**, click the icon in the upper-left corner of the Outlook application
    associated with your 365 user. A fly-out menu displays each of your existing mail folders. Click one to view the contents.
