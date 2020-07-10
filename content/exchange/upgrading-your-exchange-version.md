@@ -5,8 +5,8 @@ title: Upgrading your Exchange version
 type: article
 created_date: '2016-10-25'
 created_by: Aaron Medrano
-last_modified_date: '2019-07-22'
-last_modified_by: William Loy
+last_modified_date: '2020-07-10'
+last_modified_by: Nicholas Ramirez
 product: Microsoft Exchange
 product_url: exchange
 ---
@@ -80,7 +80,7 @@ You can use the self-service tool to upgrade Exchange at any time. All users of 
 - Admin ID
 - Password
 
-The migration portal lists all of your domains that use Exchange services.
+   The migration portal lists all of your domains that use Exchange services.
 
 2. Click the gear icon next to the domain that you want to upgrade and select **Create migration.**
 
