@@ -98,8 +98,8 @@ product_url: dedicated-hosting
   </tr>
       <tr>
     <td><b>Site-to-Site VPN</b></td>
-    <td style="background-color: green;color:white;"></td>
-    <td style="background-color: green;color:white;"></td>
+    <td style="background-color:white;"></td>
+    <td style="background-color:white;"></td>
      <td><b>Site-to-Site VPN</b></td>
   </tr>
   <tr>
@@ -278,7 +278,7 @@ product_url: dedicated-hosting
     <th colspan="4"><div align ="center"><b>Endpoint Protection</b></div></th>
   </tr>
   <tr>
-    <td><b>Cortex XDR Endpoints</b></td>
+    <td><b>Traps</b></td>
     <td style="background-color: yellow;"><b>Roadmap Item</b></td>
     <td style="background-color: yellow;"><b>Roadmap item</b></td>
     <td><b>Anti-malware Protection (AMP for Endpoints)</b></td>
@@ -293,10 +293,10 @@ product_url: dedicated-hosting
     <th colspan="4"><div align ="center"><b>Advanced Connectivity Options</b></div></th>
   </tr>
   <tr>
-    <td><b>Global Protect Advanced</td>
+    <td><b>Global Protect Advanced</b></td>
     <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
     <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
-    <td><b>Anyconnect Apex</td>
+    <td><b>Anyconnect Apex</b></td>
   </tr>
   <tr>
     <td><div align="right">Global Protect HIP checks</div></td>
