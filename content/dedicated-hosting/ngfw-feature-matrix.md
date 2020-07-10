@@ -5,7 +5,7 @@ title: NGFW Feature Matrix
 type: article
 created_date: '2020-03-12'
 created_by: Chad Sterling
-last_modified_date: '2020-03-12'
+last_modified_date: '2020-07-02'
 last_modified_by: Chad Sterling
 product: Dedicated Hosting
 product_url: dedicated-hosting
@@ -55,12 +55,6 @@ product_url: dedicated-hosting
     <td><b>Packet filtering</b></td>
   </tr>
   <tr>
-    <td><b>Site-to-Site VPN</b></td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td><b>Site-to-Site VPN</b></td>
-  </tr>
-  <tr>
     <td><b>Global Protect Basic (Client VPN)</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
@@ -85,10 +79,40 @@ product_url: dedicated-hosting
     <td><b>Routed Mode</b></td>
   </tr>
   <tr>
-    <td><b>TFA (DUO</td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td><b>TFA (DUO) - FDM Only</b></td>
+    <td><b>Two-Factor Authentication</b></td>
+    <td style="background-color:white;"><b></b></td>
+    <td style="background-color:white;"><b></b></td>
+    <td><b>Two-Factor Authentication</b></td>
+  </tr>
+    <tr>
+    <td>Duo Version 1</td>
+    <td style="background-color: green;color:white;">Supported with Customer provided by proxy server</td>
+    <td style="background-color: green;color:white;">Supported with Customer provided by proxy server</td>
+    <td>Duo Version 1</td>
+  </tr>
+      <tr>
+    <td>Duo Version 2</td>
+    <td style="background-color: yellow;">Roadmap Item</td>
+    <td style="background-color: yellow;">Roadmap Item</td>
+    <td>Duo Version 2</td>
+  </tr>
+      <tr>
+    <td><b>Site-to-Site VPN</b></td>
+    <td style="background-color: green;color:white;"></td>
+    <td style="background-color: green;color:white;"></td>
+     <td><b>Site-to-Site VPN</b></td>
+  </tr>
+  <tr>
+    <td>Policy Based VPN</td>
+    <td style="background-color: green;color:white;">Supported</td>
+    <td style="background-color: green;color:white;">Supported</td>
+    <td>Policy Based VPN</td>
+  </tr>
+   <tr>
+    <td>Route Based VPN</td>
+    <td style="background-color: green;color:white;">Supported</td>
+    <td style="background-color: red;color:white;">Unsupported Feature</td>
+    <td>Policy Based VPN</td>
   </tr>
   <tr>
     <td><b>RackConnect</b></td>
@@ -115,7 +139,7 @@ product_url: dedicated-hosting
     <td><b>Geo Fencing</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td><b>Geo Fencing</b> *included with Threat Prevention License</td>
+    <td><b>Geo Fencing</b> *updates included Threat Prevention License</td>
   </tr>
   <tr>
     <td><div align="right">Anti-Virus</div></td>
@@ -270,25 +294,31 @@ product_url: dedicated-hosting
   </tr>
   <tr>
     <td><b>Global Protect Advanced</td>
-    <td style="background-color: red;green;color:white;"><b>Professional Services Required</b></td>
-    <td style="background-color: red;green;color:white;"><b>Professional Services Required</b></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
     <td><b>Anyconnect Apex</td>
   </tr>
   <tr>
     <td><div align="right">Global Protect HIP checks</div></td>
-    <td style="background-color: red;green;color:white;"><b>Professional Services Required</b></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td><div align="right">Global Protect Mobile Support</div></td>
-    <td style="background-color: red;green;color:white;"><b>Professional Services Required</b></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td><div align="right">Global Protect IPv6 Support</div></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td><div align="right">Global Protect Clientless Mode</div></td>
-    <td style="background-color: yellow;"><b>Roadmap Item</b></td>
+    <td style="background-color: red;color:white;"><b>Professional Services Required</b></td>
     <td></td>
     <td></td>
   </tr>
