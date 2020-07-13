@@ -85,13 +85,13 @@ product_url: dedicated-hosting
     <td><b>Two-Factor Authentication</b></td>
   </tr>
     <tr>
-    <td>Duo Version 1</td>
+    <td align="right">Duo Version 1</td>
     <td style="background-color: green;color:white;">Supported with Customer provided by proxy server</td>
     <td style="background-color: green;color:white;">Supported with Customer provided by proxy server</td>
     <td>Duo Version 1</td>
   </tr>
       <tr>
-    <td>Duo Version 2</td>
+    <td align="right">Duo Version 2</td>
     <td style="background-color: yellow;">Roadmap Item</td>
     <td style="background-color: yellow;">Roadmap Item</td>
     <td>Duo Version 2</td>
@@ -103,13 +103,13 @@ product_url: dedicated-hosting
      <td><b>Site-to-Site VPN</b></td>
   </tr>
   <tr>
-    <td>Policy Based VPN</td>
+    <td align="right">Policy Based VPN</td>
     <td style="background-color: green;color:white;">Supported</td>
     <td style="background-color: green;color:white;">Supported</td>
     <td>Policy Based VPN</td>
   </tr>
    <tr>
-    <td>Route Based VPN</td>
+    <td align="right">Route Based VPN</td>
     <td style="background-color: green;color:white;">Supported</td>
     <td style="background-color: red;color:white;">Unsupported Feature</td>
     <td>Policy Based VPN</td>
@@ -172,16 +172,10 @@ product_url: dedicated-hosting
     <td><b>SSL Inbound Decryption</b></td>
   </tr>
   <tr>
-    <td><b>SSL Outbound Decryption</b> (requires PKI infrastructure)</td>
+    <td><b>SSI Outbound Decryption</b> (requires PKI infrastructure)</td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td><b>SSL Outbound Decryption</b> (requires PKI infrastructure)</td>
-  </tr>
-  <tr>
-    <td><b>SSH Decryption</b></td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
-    <td style="background-color: green;color:white;"></td>
-    <td></td>
+    <td><b>SSLIOutbound Decryption</b> (requires PKI infrastructure)</td>
   </tr>
   <tr>
     <td><b>DNS Sinkhole</b></td>
@@ -233,7 +227,7 @@ product_url: dedicated-hosting
     <td><b>Anti-Malware Protection (AMP for Networks)</b></td>
   </tr>
   <tr>
-    <td><b>Signature Updates</b> (Less than 5 minutes)</td>
+    <td><b>Instant Signature Updates</b> (Less than 5 minutes)</td>
     <td style="background-color: green;color:white;"><b>Supported</b></td>
     <td></td>
     <td></td>
@@ -258,7 +252,7 @@ product_url: dedicated-hosting
   </tr>
   <tr>
     <td><b>Wildfire Advanced file support</b></td>
-    <td style="background-color: green;color:white;"><b>Supported</b></td>
+      <td style="background-color: yellow;"><b>Roadmap Item</b></td>
     <td></td>
     <td></td>
   </tr>
