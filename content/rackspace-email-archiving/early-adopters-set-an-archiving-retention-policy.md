@@ -5,11 +5,14 @@ title: Early Adopters&mdash;Set an Archiving Retention Policy
 type: article
 created_date: '2019-11-11'
 created_by: Joe Brooks
+last_modified_date: '2020-07-14'
+last_modified_by: Joe Brooks
 product: Rackspace Email Archiving
 product_url: rackspace-email-archiving
 ---
 
 This article describes how to set a retention policy in your email archive. This feature can be used to enact policies that only allow the retention of email records for a certain duration of time.
+**Please Note: New Archives created after June 24, 2020 will have a default retention policy that is set to 7 years. This policy can be modified at any moment through the Archive Portal.**
 
 
 ### Prerequisites
