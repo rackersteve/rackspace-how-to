@@ -30,3 +30,4 @@ change the password.
 
 After you enter the new password, your server reboots and the new
 password is set.
+
