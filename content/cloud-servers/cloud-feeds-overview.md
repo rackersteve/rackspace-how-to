@@ -12,19 +12,19 @@ product_url: cloud-servers
 ---
 
 Rackspace Cloud Feeds is a service that accepts and validates event notifications from other
-Rackspace Cloud services, and presents the data to you in a standardized way that is easy to
+Rackspace Cloud services and presents the data to you in a standardized way that is easy to
 interpret.
 
 ### What is Cloud Feeds?
 
 Modern complex computing environments generate large amounts of data related to system events,
 security, and resources. For example, you might receive notifications to inform you that a server
-has rebooted, to inform you of a server's network bandwidth use, or in response to
+has rebooted, inform you of a server's network bandwidth use, or respond to
 a security condition such as a failed login attempt.
 
 Managing the information driven by event notifications is problematic when the data sources use
 different transmission formats and protocols. Gaining access to this information is further
-complicated when you are working with virtualized cloud-based systems because infrastructure-level
+complicated when working with virtualized cloud-based systems because infrastructure-level
 event data might not be available to you. However, your ability to access, manage, and react to this
 information can have a major impact on your mission-critical processes and applications.
 
@@ -39,7 +39,7 @@ notifications from multiple Rackspace Cloud services by using a single protocol 
 
 ### Access Cloud Feeds
 
-Cloud Feeds events are accessed via the simple Atom Publishing Protocol, which is HTTP-based.
+Access Cloud Feeds events by using the simple Atom Publishing Protocol, which is HTTP-based.
 Several tools are available that can send HTTP requests and capture the output, including the
 following ones:
 
@@ -53,9 +53,9 @@ To retrieve events from a feed, send an HTTP GET request to the appropriate URL.
 the *data center*, *feed name*, and your *tenant ID*. You need a valid *authentication token* to
 make the request.
 
-By default, the 25 most current events are retrieved first. You can specify how many events to
-retrieve, or modify search parameters to retrieve only events that match a certain criteria. The
-results are returned in Atom Syndication Format, which includes information to help you navigate the
+By default, the request retrieves the 25 most current events first. You can specify how many events to
+retrieve, or modify search parameters to retrieve only events that match a certain criteria. The response
+returns the results in the Atom Syndication Format, which includes information to help you navigate the
 list of events in the feed.
 
 ### Finding more information
