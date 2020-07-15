@@ -19,7 +19,7 @@ interpret.
 
 Modern complex computing environments generate large amounts of data related to system events,
 security, and resources. For example, you might receive notifications to inform you that a server
-has rebooted, inform you of a server's network bandwidth use, or respond to
+has rebooted, detail a server's network bandwidth use, or respond to
 a security condition such as a failed login attempt.
 
 Managing the information driven by event notifications is problematic when the data sources use
@@ -32,16 +32,15 @@ That's where Cloud Feeds comes in.
 
 The Cloud Feeds service accepts event notifications from other Rackspace Cloud services, validates
 them, and makes the information available to you in a reliable, secure, and standardized way.
-Critical business processes that rely on this information can now be enabled for the cloud, just as
-they are in an on-premises computing environment. In addition, because Cloud Feeds uses the Atom
+You can now enable critical business processes that rely on this information for the cloud, just as
+you can in an on-premises computing environment. In addition, because Cloud Feeds uses the Atom
 Publishing Protocol (RFC-5023) and Atom Syndication Formatted events (RFC-4287), you can access
 notifications from multiple Rackspace Cloud services by using a single protocol and format.
 
 ### Access Cloud Feeds
 
 Access Cloud Feeds events by using the simple Atom Publishing Protocol, which is HTTP-based.
-Several tools are available that can send HTTP requests and capture the output, including the
-following ones:
+You can use any of the following tools that can send HTTP requests and capture the output:
 
 - [cURL, a command-line tool](http://curl.haxx.se/)
 - [Mozilla Firefox REST client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)
@@ -49,13 +48,13 @@ following ones:
 - [RESTclient, a Java application used to test RESTful web
   services](http://code.google.com/p/rest-client/)
 
-To retrieve events from a feed, send an HTTP GET request to the appropriate URL. The URL depends on
-the *data center*, *feed name*, and your *tenant ID*. You need a valid *authentication token* to
+To retrieve events from a feed, send an HTTP `GET` request to the appropriate URL. The URL depends on
+the **data center**, **feed name**, and your **tenant ID**. You need a valid **authentication token** to
 make the request.
 
 By default, the request retrieves the 25 most current events first. You can specify how many events to
 retrieve, or modify search parameters to retrieve only events that match a certain criteria. The response
-returns the results in the Atom Syndication Format, which includes information to help you navigate the
+returns the results in Atom Syndication Format, which includes information to help you navigate the
 list of events in the feed.
 
 ### Finding more information
