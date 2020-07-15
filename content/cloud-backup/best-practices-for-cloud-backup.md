@@ -257,7 +257,6 @@ To minimize your chances of experiencing the following issues, keep your backup 
 
   Ensure that you're running the latest agent release. Then, attempt to determine the cause of the error. If the error is intermittent, try the backup again.
 
-
 - **My backup or restore is slow. What can I do?**
 
   If your backup or restore is encrypted, it is especially slow. Also, review the “Choosing what to back up” section for what you should *not* be backing up. The less there is to back up or restore, the faster the process is.
