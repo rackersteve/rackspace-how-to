@@ -1,11 +1,11 @@
 ---
 permalink: using-windows-performance-analyzer-to-troubleshoot-performance-issues/
-audit_date: '2020-07-16’
+audit_date: '2020-07-16'
 title: ‘Using Windows Performance Analyzer to troubleshoot performance issues’
 type: article
-created_date: '2020-07-09’
+created_date: '2020-07-09'
 created_by: Karoline Mills
-last_modified_date: '2020-07-16’
+last_modified_date: '2020-07-16'
 last_modified_by: Cat Lookabaugh
 product: Cloud Servers
 product_url: cloud-servers
