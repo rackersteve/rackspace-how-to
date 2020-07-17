@@ -1,5 +1,5 @@
 ---
-permalink: install-ubuntu-on-ubuntu/
+permalink: install-nginx-on-ubuntu/
 audit_date:
 title: Install nginx on Ubuntu
 type: article
