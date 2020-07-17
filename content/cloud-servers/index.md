@@ -51,6 +51,7 @@ This introduction covers everything you need to know as a new Rackspace customer
 - [Start a console session](/how-to/start-a-console-session)
 - [Manage a cloud server](/how-to/manage-a-cloud-server)
 - [Reboot your server](/how-to/reboot-your-server)
+- [Stop your server](/how-to/stop-your-server)
 - [Rescue mode](/how-to/rescue-mode)
 - [Rebuild a cloud server](/how-to/rebuild-a-cloud-server)
 - [Resize standard servers](/how-to/managing-your-server-resizing-standard-and-general-purpose-servers)
