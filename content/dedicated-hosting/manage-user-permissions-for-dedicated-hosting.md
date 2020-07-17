@@ -1,12 +1,12 @@
 ---
 permalink: manage-user-permissions-for-dedicated-hosting/
-audit_date: '2018-11-28'
+audit_date: '2020-07-17'
 title: 'Manage user permissions for Dedicated Hosting'
 type: article
 created_date: '2018-11-28'
 created_by: Kate Dougherty
-last_modified_date: '2019-01-14'
-last_modified_by: Kate Dougherty
+last_modified_date: '2020-07-17'
+last_modified_by: Rose Morales
 product: Dedicated Hosting
 product_url: dedicated-hosting
 ---
@@ -29,11 +29,10 @@ grants the user the ability to access and manage the device or service.
 The following categories of permissions are available for Dedicated Hosting
 accounts:
 
-- **Direct permissions**: The permissions that grant the user direct access to
+- **Direct permissions** grant the user direct access to
   account permissions, linked cloud accounts, devices, or services.
 
-- **Effective permissions**: The permissions that a user inherits as a result
-  of their memberships in user and product groups.
+- **Effective permissions**, inherited as a result of their memberships in user and product groups.
 
 **Note**: You can grant a user a combination of direct and effective
 permissions. MyRackspace uses the highest level of permission granted.
@@ -42,21 +41,38 @@ permissions. MyRackspace uses the highest level of permission granted.
 
 You can assign permissions in the MyRackspace Portal in the following ways:
 
-- **Assign by User**: Enables you to select an individual and grant them
-  access to account-level permissions, linked cloud accounts, devices,
-  services, and product groups.
+- **Assign by User**: Allows you to select an individual and grant them:
+  1. Permissions at the account level.
+  2. Access to cloud accounts, devices, services or Product Groups.
+  
+  How to:
 
-- **Assign by User Group**: Enables you to select a group of users and
-  grant them access to account-level permissions, linked cloud accounts,
-  devices, services, and product groups.
+  Click on **Assign by User** > Click on specific user > Select tab accordingly.
 
-- **Assign by Product**: Enables you to select a linked cloud account, device,
-  or service and assign users and user groups to that product.
+- **Assign by User Group**: Allows you to select a group of users and grant them:
+  1. Permissions at the account level.
+  2. Access to cloud accounts, devices, services or Product Groups.
+  
+  How to:
 
-- **Assign by Product Group**: Enables you to select a group of
-  accounts, devices, or services and assign users and user groups to that
-  product group.
+  Click on **Assign by Group** > Click on specific group > Select tab accordingly.
 
+- **Assign by Product**: Allows you to select a product, cloud account, device, or service and:
+  1. Associate to users or User Groups.
+  2. Assign users or User Groups portal access permissions.
+  
+  How to:
+
+  Click on **Assign by Product** > Click on specific product, cloud account, device, or service > Select tab accordingly.
+
+- **Assign by Product Group**: Allows you to select a Product Group containing cloud accounts, devices, or services:
+  1. Associate to users or User Groups.
+  2. Assign users or User Groups portal access permissions.
+  
+  How to:
+
+  Click on **Assign by Product Group** > Click on specific product group > Select tab accordingly.
+  
 ### Manage groups
 
 This section shows you how to manage groups.
