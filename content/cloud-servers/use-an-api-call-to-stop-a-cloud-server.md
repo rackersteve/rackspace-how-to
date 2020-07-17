@@ -22,11 +22,13 @@ You can use the Cloud Server Application Programmer Interface (API) by using a c
 command, a script, or the interactive website application, Pitchfork.  To use Pitchfork
 to stop a server, perform the following steps:
 
-1. Log in to [Pithfork](https://pitchfork.rax.io/servers/#stop_server-cloud_servers/).
-2. Scroll down to **Stop Server** in the **Server Actions** section.
-3. Click **Details**.
-4. Insert the instance UUID, which you can find in the Cloud Control Panel.
-5. Click **Post**.
+1. Log in to [Pithfork](https://pitchfork.rax.io/). 
+   Please check how to retreive you credential [Get your credentials](https://developer.rackspace.com/docs/rackspace-monitoring/v1/getting-started/get-credentials-include/#get-your-credentials).
+2. Under Available Product Click Cloud Server 
+3. Scroll down to **Stop Server** in the **Server Actions** section.
+4. Click on Details Button.
+5. Insert the instance UUID, which you can find in the Cloud Control Panel.
+6. Click Mock API Call
 
 This command stops the server, and the server no longer accepts connections. 
 
