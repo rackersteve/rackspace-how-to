@@ -41,37 +41,49 @@ permissions. MyRackspace uses the highest level of permission granted.
 
 You can assign permissions in the MyRackspace Portal in the following ways:
 
-- **Assign by User**: Allows you to select an individual and grant them:
+#### Assign by User
+
+Allows you to select an individual and grant them:
+
+  1. Permissions at the account level.
+  2. Access to cloud accounts, devices, services or Product Groups.
+
+  How to:
+
+- Click on **Assign by User** > Click on specific user > Select tab accordingly.
+
+#### Assign by User Group
+
+Allows you to select a group of users and grant them:
+
   1. Permissions at the account level.
   2. Access to cloud accounts, devices, services or Product Groups.
   
   How to:
-
-  Click on **Assign by User** > Click on specific user > Select tab accordingly.
-
-- **Assign by User Group**: Allows you to select a group of users and grant them:
-  1. Permissions at the account level.
-  2. Access to cloud accounts, devices, services or Product Groups.
   
-  How to:
+- Click on **Assign by Group** > Click on specific group > Select tab accordingly.
 
-  Click on **Assign by Group** > Click on specific group > Select tab accordingly.
+#### Assign by Product
 
-- **Assign by Product**: Allows you to select a product, cloud account, device, or service and:
+Allows you to select a product, cloud account, device, or service and:
+
   1. Associate to users or User Groups.
   2. Assign users or User Groups portal access permissions.
   
   How to:
 
-  Click on **Assign by Product** > Click on specific product, cloud account, device, or service > Select tab accordingly.
+- Click on **Assign by Product** > Click on specific product, cloud account, device, or service > Select tab accordingly.
 
-- **Assign by Product Group**: Allows you to select a Product Group containing cloud accounts, devices, or services:
+#### Assign by Product Group
+
+Allows you to select a Product Group containing cloud accounts, devices, or services:
+
   1. Associate to users or User Groups.
   2. Assign users or User Groups portal access permissions.
   
   How to:
 
-  Click on **Assign by Product Group** > Click on specific product group > Select tab accordingly.
+- Click on **Assign by Product Group** > Click on specific product group > Select tab accordingly.
   
 ### Manage groups
 
