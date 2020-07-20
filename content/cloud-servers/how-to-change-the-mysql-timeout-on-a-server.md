@@ -11,39 +11,41 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
-When an application fails to close an unused connection, a low **wait_timeout** value helps avoid
-exceeding the permitted number of connections.
 
-1. Log in to your server using Secure Shell&reg; (SSH).
+When an application fails to close an unused connection, a low `wait_timeout` value helps you avoid
+exceeding the permitted number of connections. Use the following instructions to set this vakue:
 
-2. Use the sudo command to edit **my.cnf**, the MySQL&reg; configuration file.
+1. Log in to your server by using Secure Shell&reg; (SSH).
 
-        sudo vi /etc/my.cnf
+2. Use the sudo command to edit `my.cnf`, the MySQL&reg; configuration file.
+
+        $ sudo vi /etc/my.cnf
 
 3. Locate the timeout configuration and make the adjustments that fit your server.
 
         wait_timeout = 28800
         interactive_timeout = 28800
 
-    - The **interactive_timeout** value does not affect any web application connections. As best
-      practice keep the **wait_timeout** low.
+    - The `interactive_timeout` value does not affect any web application connections. A low
+        `wait_timeout` is a normal best practice.
 
     - Stateless PHP environments do well with a 60-second timeout or less. Applications that use a
-        connection pool (Java, .NET, etc.) need to adjust the **wait_timeout** to match their
-        connection pool settings. The default, 8 hours = 28800 seconds, works well with properly
-        configured connection pools.
+        connection pool (Java&reg;, .NET&reg;, and so on) need to adjust the `wait_timeout` value 
+        to match their connection pool settings. The default `8 hours = 28800` seconds works well with
+        properly-configured connection pools.
 
-    - Configuring the **wait_timeout** to be slightly longer than the application connection pool's
-        expected connection lifetime is good practice. Consider changing the value online because it does
-        not require a MySQL restart and can be adjusted while the server runs without
-        incurring downtime. Change the value to `set global wait_timeout=60`, and any newly created sessions
-        inherit it. Be sure to preserve the setting in **my.cnf**. If the application abandons the
-        connection, any existing connections need to hit the old value of **wait_timeout** . If you have
-        reporting jobs that take longer to perform local processing while in a transaction, you might
-        consider having such jobs issue a `set session wait_timeout=3600` instruction on connection.
+    - Configure the `wait_timeout` to be slightly longer than the application connection pool's
+        expected connection lifetime as a safety check. Consider changing the value online because that
+        does not require a MySQL restart, and you can adjusted it while the server runs without
+        incurring downtime. Change the value to `set global wait_timeout=60`, and any newly created
+        sessions inherit it. Be sure to preserve the setting in `my.cnf`. Any existing
+        connections need to hit the old value of `wait_timeout` if the application abandoned
+        the connection. If you do have reporting jobs that do longer local processing while in
+        a transaction, you might consider having such jobs issue `set session wait_timeout=3600`
+        upon connecting.
 
 4. Save the changes and exit the editor.
 
-5. Use the following command to restart MySQL and apply the changes:
+5. Use the following command to restart MySQL and apply the changes, if required:
 
-        sudo /etc/init.d/mysql restart
+        $ sudo /etc/init.d/mysql restart
