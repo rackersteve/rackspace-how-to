@@ -1,7 +1,7 @@
 ---
 permalink: how-to-change-the-mysql-timeout-on-a-server/
 audit_date: '2020-07-13'
-title: Change the MySQL Timeout on a Server
+title: Change the MySQL timeout on a server
 type: article
 created_date: '2013-07-24'
 created_by: Rose Contreras
@@ -11,6 +11,7 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
+
 When an application fails to close a unused connection, a low `wait_timeout' value helps avoid
 reaching the permitted number of connections.
 
@@ -18,7 +19,7 @@ reaching the permitted number of connections.
 
 2. Use the sudo command to edit `my.cnf`, MySQL's configuration file.
 
-        sudo vi /etc/my.cnf
+        $ sudo vi /etc/my.cnf
 
 3. Locate the timeout configuration and make the adjustments that fit your server.
 
@@ -45,6 +46,6 @@ reaching the permitted number of connections.
 
 4. Save the changes and exit the editor.
 
-5. Restart MySQL to apply the changes as follows:
+5. Restart MySQL to apply the changes if required:
 
-        sudo /etc/init.d/mysql restart
+        $ sudo /etc/init.d/mysql restart

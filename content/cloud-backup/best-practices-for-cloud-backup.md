@@ -233,7 +233,7 @@ You can change the most commonly changed log file settings by using the **AgentC
 
 After you change any of these values, click **Save**.
 
-For more information, see [Cloud Backup agent logging] (/how-to/cloud-backup-agent-logging-basics/).
+For more information, see [Cloud Backup agent logging](/how-to/cloud-backup-agent-logging-basics/).
 
 ### Frequently encountered issues
 
@@ -256,7 +256,6 @@ To minimize your chances of experiencing the following issues, keep your backup 
   Sometimes, the agent might fail to back up a particular file because of a permissions error. Either the file is in use when the agent attempts to save it or the file can’t be read by the agent. Consider permissions when looking for the root cause of a backup failure.
 
   Ensure that you're running the latest agent release. Then, attempt to determine the cause of the error. If the error is intermittent, try the backup again.
-
 
 - **My backup or restore is slow. What can I do?**
 
