@@ -71,27 +71,7 @@ The domain quarantine still receives spam messages for other Exchange addresses 
 
 #### Upgrade Exchange
 
-You can use the self-service tool to upgrade Exchange at any time. All users of your Exchange server must migrate during the upgrade. If you receive an error while using the tool, contact [Rackspace Support](https://www.rackspace.com/support).
-
-1. Log in to [Rackspacemigrations.com](https://rackspacemigrations.com/Account/Login) with the following information:
-
-- Account number
-- Admin ID
-- Password
-
-   The migration portal lists all of your domains that use Exchange services.
-
-2. Click the gear icon next to the domain that you want to upgrade and select **Create migration.**
-
-3. On the **Create Migration** page, select a date and time to schedule the migration and click **Next.**
-
-4. On the **Confirmation** page, verify the date and time and click **Submit Migration.**
-
-After you submit the migration information, you return to the [Rackspace migrations home page](https://rackspacemigrations.com/).
-
-To reschedule or cancel the migration before the scheduled time, click the gear icon next to the domain you are migrating and select the appropriate command.
-
-When the migration completes, you can log in to the [Mail Control Panel](https://cp.rackspace.com/Login.aspx?ReturnUrl=%2f) and manage the mailboxes.
+You can contact Support to schedule an Exchange upgrade at any time. You can request this migration through Support via ticket, chat, or phone call.
 
 ### Frequently asked questions
 
