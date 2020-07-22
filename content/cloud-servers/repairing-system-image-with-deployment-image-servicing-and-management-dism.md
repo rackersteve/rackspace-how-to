@@ -13,44 +13,39 @@ product_url: cloud-servers
 
 
 Deployment Image Servicing and Management (DISM) is a Windows&reg built-in
-command-line tool that is used to prepare, modify and repair Windows system
-images. Images can be saved and used later in deploying and restoring Windows
-operating system. DISM is often used for repairing your system when it is not
-booting properly or getting the blue screen errors. System File Check SFC be
-used to resolve above described system crashes first. Reference Repairing (
-Insert link for System Files with System File Check Tool article) for running
-System File Check.
+command-line tool used to prepare, modify, and repair Windows system images.
+Images can be saved and used later in deploying and restoring Windows operating
+system. DISM is used to repair your system when it is not booting properly or
+getting a blue screen error, when System File Check (SFC) is unable to resolve
+it first. 
 
-**DISM is invoked from Windows 'Administrator' privileged Command Prompt or
-PowerShell.** In Command Prompt window, you can type the command lines below,
-and press Enter after typing each command line to check and repair Windows 10
-system image.
+**Note** This task requires a user with administrative privileges on the server.
 
-DISM /Online /Cleanup-Image /CheckHealth (this command checks if there are any
-corruptions inside the local image, but not repair them) DISM /Online
-/Cleanup-Image /ScanHealth (this command performs a more advanced scan to check
-if the Windows 10 image has corruptions) DISM /Online /Cleanup-Image
-/RestoreHealth (this DISM command will run an advanced scan and automatically
-repair any detected problems with the image)
+- Open the **Command Prompt** or **PowerShell** and type the command lines below. Press **Enter** after typing each command line to check and repair a Windows&reg 10 system image.
 
+`DISM /Online /Cleanup-Image /CheckHealth`
 
-Help screen for managing the active online image **DISM /Online** Deployment
-Image Servicing and Management tool Version: 6.3.9600.19408
+Checks for corruptions inside the local image, no repairs happen.
 
-Image Version: 6.3.9600.19397
+`DISM /Online /Cleanup-Image /ScanHealth`
 
+Performs a deep scan to check if Windows&reg 10 image has system corruptions.
 
+`DISM /Online /Cleanup-Image /RestoreHealth` 
+
+Runs an advanced scan and automatically repairs image problems.
+
+</br>
 The following commands may be used to service the image:
 
-WINDOWS EDITION SERVICING COMMANDS:
+####Windows&reg edition servicing commands
 
-  /Set-ProductKey         - Sets the product key of the offline image.
-  /Get-TargetEditions     - Displays a list of Windows editions that an image
-  can be upgraded to. /Get-CurrentEdition     - Displays the edition of the
-  current image. /Set-Edition            - Upgrades an image to a higher
-  edition.
+| /Set-ProductKey     | Sets the product key of the offline image   |
+| /Get-TargetEditions | Displays a list of Windows editions that an image can be upgraded to. |
+| /Get-CurrentEdition | Displays the edition of the current image.                            |
+| /Set-Edition        | Upgrades an image to a higher edition.                                |
 
-OS GENERAL COMMANDS:
+####General commands
 
   /Optimize-Image         - Performs specified configurations to an offline
                             image.
@@ -140,7 +135,7 @@ PACKAGE SERVICING COMMANDS:
   operations on the image.
 
 For more information about these servicing commands and their arguments, specify
-a command immediately before /?.
+a command before /?.
 
      Examples:
          DISM.exe /Image:C:\test\offline /Apply-Unattend /?
