@@ -32,6 +32,7 @@ The following table shows the possible response codes for the operation:
 500|Load Balancer Fault|The load balancer has experienced a fault.
 503|Service Unavailable|The service is not available.
 
+
 ### Prerequisites
 
 - You must create an HTTP (port 80) load balancer.
