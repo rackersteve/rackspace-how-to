@@ -22,43 +22,35 @@ it first.
 
 - Open the **Command Prompt** or **PowerShell** and type the command lines below. Press **Enter** after typing each command line to check and repair a Windows&reg 10 system image.
 
-  `DISM /Online /Cleanup-Image /CheckHealth`
-
-  Checks for corruptions inside the local image, no repairs happen.
-
-  `DISM /Online /Cleanup-Image /ScanHealth`
-
-  Performs a deep scan to check if Windows&reg 10 image has system corruptions.
-
-  `DISM /Online /Cleanup-Image /RestoreHealth`
-
-  Runs an advanced scan and automatically repairs image problems.
+ | `DISM /Online /Cleanup-Image /CheckHealth`    | Checks for corrupted files inside the local image, no repairs happen. |
+ | `DISM /Online /Cleanup-Image /ScanHealth`     | Performs a deeper scan to check for corrupted files.|
+ | `DISM /Online /Cleanup-Image /RestoreHealth`  | Runs an advanced scan and repairs image problems.|
 
 <br>
 
 ####Windows&reg edition servicing commands
 
-  | `/Set-ProductKey`     | Sets the product key of the offline image|
-  | `/Get-TargetEditions` | Displays a list of Windows editions that an image can be upgraded to.|
-  | `/Get-CurrentEdition` | Displays the edition of the current image.|
+  | `/Set-ProductKey`     | Sets offline image product key.|
+  | `/Get-TargetEditions` | Displays a list of Windows&reg editions that an image can be upgraded to.|
+  | `/Get-CurrentEdition` | Displays current image's edition.|
   | `/Set-Edition`        | Upgrades an image to a higher edition.|
 
 ####General commands
 
-  | `/Optimize-Image`    | Performs specified configurations to an offline image.|
+  | `/Optimize-Image`    | Performs specific configurations to an offline image.|
 
 ####Default association commands
 
-  | `/Remove-DefaultAppAssociations`   | Removes the default application associations from a Windows image. |
-  | `/Import-DefaultAppAssociations`   | Imports a set of default application associations to a Windows image. |
-  | `/Get-DefaultAppAssociations`      | Displays the list of default application associations from a Windows image. |
+  | `/Remove-DefaultAppAssociations`   | Removes the default application associations from a Windows&reg image. |
+  | `/Import-DefaultAppAssociations`   | Imports a set of default application associations to a Windows&reg image. |
+  | `/Get-DefaultAppAssociations`      | Displays the list of default application associations from a Windows&reg image. |
   | `/Export-DefaultAppAssociations`   | Exports the default application associations from a running operating system. |
 
 ####AppX servicing commands
 
-  | `/Set-ProvisionedAppxDataFile`   | Places custom data into the specified app package (.appx or .appxbundle). The specified application package must already be in the image.|
+  | `/Set-ProvisionedAppxDataFile`   | Places custom data into the specified app package (.appx or .appxbundle). The specified application package must be in the image.|
   | `/Remove-ProvisionedAppxPackage` | Removes app packages (.appx or .appxbundle) from the image. App packages will not be installed when new user accounts are created.| 
-  | `/Add-ProvisionedAppxPackage`    | Adds app packages (.appx or .appxbundle) to the image and sets them to install for each new user.|
+  | `/Add-ProvisionedAppxPackage`    | Adds app packages (.appx or .appxbundle) to the image and installs them for each new user.|
   | `/Get-ProvisionedAppxPackages`   | Displays information about app packages (.appx or .appxbundle) in an image that are set to install for each new user.|
 
 ####Unattended servicing commands
@@ -75,7 +67,7 @@ it first.
 
 ####International servicing commands
 
-  | `/Set-LayeredDriver`     | Sets keyboard layered driver. |
+  | `/Set-LayeredDriver`     | Sets a keyboard layered driver. |
   | `/Set-UILang`            | Sets the default system UI language that is used in the mounted offline image. |
   | `/Set-UILangFallback`    | Sets the fallback default language for the system UI in the mounted offline image. |
   | `/Set-UserLocale`        | Sets the user locale in the mounted offline image. |
