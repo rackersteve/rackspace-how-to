@@ -1,7 +1,7 @@
 ---
 permalink: repairing-system-image-with-deployment-image-servicing-and-management-dism/
 audit_date:
-title: 'Repairing System Image with DISM'
+title: 'Repair System Image with DISM'
 type: article
 created_date: '2020-07-07'
 created_by: Dave Myers
@@ -23,32 +23,30 @@ it first.
 
 - Open the **Command Prompt** or **PowerShell** and type the command lines below. Press **Enter** after typing each command line to check and repair a Windows&reg 10 system image.
 
-`DISM /Online /Cleanup-Image /CheckHealth`
+  ``DISM /Online /Cleanup-Image /CheckHealth``
 
-Checks for corruptions inside the local image, no repairs happen.
+  Checks for corruptions inside the local image, no repairs happen.
 
-`DISM /Online /Cleanup-Image /ScanHealth`
+  `DISM /Online /Cleanup-Image /ScanHealth`
 
-Performs a deep scan to check if Windows&reg 10 image has system corruptions.
+  Performs a deep scan to check if Windows&reg 10 image has system corruptions.
 
-`DISM /Online /Cleanup-Image /RestoreHealth` 
+  ```DISM /Online /Cleanup-Image /RestoreHealth``` 
 
-Runs an advanced scan and automatically repairs image problems.
+  Runs an advanced scan and automatically repairs image problems.
 
-</br>
-The following commands may be used to service the image:
+<br>
 
 ####Windows&reg edition servicing commands
 
-| /Set-ProductKey     | Sets the product key of the offline image   |
-| /Get-TargetEditions | Displays a list of Windows editions that an image can be upgraded to. |
-| /Get-CurrentEdition | Displays the edition of the current image.                            |
-| /Set-Edition        | Upgrades an image to a higher edition.                                |
+| /Set-ProductKey     | Sets the product key of the offline image|
+| /Get-TargetEditions | Displays a list of Windows editions that an image can be upgraded to.|
+| /Get-CurrentEdition | Displays the edition of the current image.|
+| /Set-Edition        | Upgrades an image to a higher edition.|
 
 ####General commands
 
-  /Optimize-Image         - Performs specified configurations to an offline
-                            image.
+|  /Optimize-Image    | Performs specified configurations to an offline image.|
 
 DEFAULT ASSOCIATIONS COMMANDS:
 
