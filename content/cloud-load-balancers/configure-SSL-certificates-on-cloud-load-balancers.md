@@ -49,7 +49,11 @@ The following table shows the possible response codes for the operation:
 
 4. Paste the SSL certificate data into the appropriate boxes.
 
-**NOTE**: You can choose to allow secure and insecure traffic. However, when terminating the SSL on the load balancer, you should only allow secure traffic, as a best practice. You can also select your Transport Layer Security (**TLS**) and **Cipher Profile** in this section. For more information about your **Cipher Profile**, see [Update Cipher Profile on Cloud Load Balancer](/how-to/update-the-cipher-profile-on-a-cloud-load-balancer). For more information on TLS version, see [Disable TLS 1.0 Cloud Load Balancers](/how-to/disable-tls1-for-cloud-load-balancers/).
+    **NOTE**: You can choose to allow secure and insecure traffic. However, when terminating the SSL on the load
+    balancer, you should only allow   secure traffic, as a best practice. You can also select your Transport Layer
+    Security (**TLS**) and **Cipher Profile** in this section. For more information about your **Cipher Profile**,
+    see [Update Cipher Profile on Cloud Load Balancer](/how-to/update-the-cipher-profile-on-a-cloud-load-balancer).
+    For more information on TLS version, see [Disable TLS 1.0 Cloud Load Balancers](/how-to/disable-tls1-for-cloud-load-balancers/).
 
 5. Click **Save Configuration** to apply the certificate. 
 
