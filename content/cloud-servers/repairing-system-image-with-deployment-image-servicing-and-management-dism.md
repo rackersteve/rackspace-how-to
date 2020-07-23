@@ -5,7 +5,7 @@ title: 'Repair System Image with DISM'
 type: article
 created_date: '2020-07-07'
 created_by: Dave Myers
-last_modified_date: '2020-07-21'
+last_modified_date: '2020-07-23'
 last_modified_by: Rose Morales
 product: Cloud Servers
 product_url: cloud-servers
