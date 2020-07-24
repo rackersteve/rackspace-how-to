@@ -11,7 +11,7 @@ product: Dedicated Hosting
 product_url: dedicated-hosting
 ---
 
-This article explains user permissions for Dedicated Hosting and shows you
+This article describes user permissions for Dedicated Hosting and shows you
 how to manage these permissions.
 
 You manage permissions in the [MyRackspace
@@ -29,10 +29,10 @@ grants the user the ability to access and manage the device or service.
 The following categories of permissions are available for Dedicated Hosting
 accounts:
 
-- **Direct permissions** grant the user direct access to
+- **Direct permissions**: Grant the user direct access to
   account permissions, linked cloud accounts, devices, or services.
 
-- **Effective permissions**, inherited as a result of their memberships in user and product groups.
+- **Effective permissions**: Are inherited as a result of their memberships in user and product groups.
 
 **Note**: You can grant a user a combination of direct and effective
 permissions. MyRackspace uses the highest level of permission granted.
@@ -41,48 +41,57 @@ permissions. MyRackspace uses the highest level of permission granted.
 
 You can assign permissions in the MyRackspace Portal in the following ways:
 
-#### Assign by User
+#### Assign by user
 
 Allows you to select an individual and grant them:
 
-  1. Permissions at the account level.
-  2. Access to linked cloud accounts, devices, services or **Product Groups**.
+- Permissions at the account level.
+- Access to linked cloud accounts, devices, services or **Product Groups**.
 
-  How to:
+To assign permissions by user, perform the following steps:
 
-- Click on **Assign by User** > Click on specific user > Select tab accordingly.
+1. Click on **Assign by User**.
 
-#### Assign by User Group
+2. Click on the specific user and select the tab accordingly.
+
+#### Assign by user group
 
 Allows you to select a group of users and grant them:
 
-  1. Permissions at the account level.
-  2. Access to linked cloud accounts, devices, services or **Product Groups**.
+- Permissions at the account level.
+- Access to linked cloud accounts, devices, services or **Product Groups**.
+
+To assign permissions by user group, perform the following steps:
   
-  How to:
+1. Click on **Assign by Group**.
+
+2. Click on the specific group and select the tab accordingly.
+
+#### Assign by product
+
+Allows you to select a linked cloud account, device, or service and do the following tasks:
+
+- Associate it with users or **User Groups**.
+- Assign users or **User Groups** portal access permissions.
   
-- Click on **Assign by Group** > Click on specific group > Select tab accordingly.
+To assign permissions by product, perform the following steps:
 
-#### Assign by Product
+1. Click on **Assign by Product**.
 
-Allows you to select a linked cloud account, device, or service and:
+2. Click on the specific linked cloud account, device, or service and select the tab accordingly.
 
-  1. Associate it with users or **User Groups**.
-  2. Assign users or **User Groups** portal access permissions.
-  
-  How to:
+#### Assign by product group
 
-- Click on **Assign by Product** > Click on specific linked cloud account, device, or service > Select tab accordingly.
+Allows you to select a **Product Group** containing linked cloud accounts, devices, or services and do the following tasks:
 
-#### Assign by Product Group
+- Associate it with users or **User Groups**
+- Assign users or **User Groups** portal access permissions.
+ 
+To assign permissions by product group, perform the following steps:
 
-Allows you to select a **Product Group** containing linked cloud accounts, devices, or services:
+1. Click on **Assign by Product Group**.
 
-  1. Associate it with users or **User Groups**  2. Assign users or **User Groups** portal access permissions.
-  
-  How to:
-
-- Click on **Assign by Product Group** > Click on specific **Product Group** > Select tab accordingly.
+2. Click on the specific **Product Group** and select the tab accordingly.
   
 ### Manage groups
 
@@ -121,10 +130,7 @@ Use the following steps to grant a user group access to a product group:
 3. In the **User Groups** section, select an existing user group.
 4. Click **Assign by User** at the top of the page (if it isn't already the
    active tab).
-5. Click the **Product Groups** tab.
-
-    A list of products appears.
-
+5. Click the **Product Groups** tab to display a list of products.
 6. In the row for each product for which you want to assign permissions,
    select the radio button that corresponds to the permission level that you
    want to set for the product.
@@ -137,10 +143,7 @@ Use the following steps to grant a product group access to a user group:
 2. In the subnavigation bar, select **Account > Permissions**.
 3. At the top of the page, click **Assign by Product**.
 4. In the **Product Groups** section, select an existing product group.
-5. Click the **User Groups** tab.
-
-    A list of user groups appears.
-
+5. Click the **User Groups** tab to display a list of user groups.
 6. In the row for each user group for which you want to assign permissions,
    select the radio button that corresponds to the permission level that you
    want to set for the user group.
@@ -149,12 +152,8 @@ Use the following steps to grant a product group access to a user group:
 
 Use the following steps to delete a user or product group:
 
-1. Click the arrow icon to the left of the user or product group.
-
-    The row for that group expands.
-
+1. Click the arrow icon to the left of the user or product group to expand the row for that group.
 2. Click **Edit Group**.
-
 3. Select **Actions > Delete Group**.
 
 ### Manage global permissions
@@ -162,7 +161,7 @@ Use the following steps to delete a user or product group:
 The **Global Permissions** section enables you to make changes across your
 entire account.
 
-**Ticketing Settings** enable you to control the tickets that your users have
+**Ticketing Settings** enables you to control the tickets that your users have
 permission to see when those tickets concern one or more devices.
 
 The following table shows the ticketing settings that are required for common
