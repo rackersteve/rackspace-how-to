@@ -23,27 +23,27 @@ You need a Linux-based server running CentOS&reg; 8.
 
 Perform the following steps to install a LAMP stack:
 
-1) To install the Apache web service, which serves as a base for our application, use the following command:
+1. To install the Apache web service, which serves as a base for our application, use the following command:
 
        dnf -y install @httpd
 
-2) To configure Apache to start on boot and modify the software firewall, use the following commands:
+2. To configure Apache to start on boot and modify the software firewall, use the following commands:
 
        systemctl enable --now httpd
        firewall-cmd --add-service={http,https} --permanent
        firewall-cmd --reload
 
-3) To install MySQL for the database and set it to start on boot, use the following commands:
+3. To install MySQL for the database and set it to start on boot, use the following commands:
 
        dnf install @mysql:8.0
        systemctl enable --now mysqld
 
-4) To install PHP and some often required PHP modules, use the following commands:
+4. To install PHP and some often required PHP modules, use the following commands:
 
        dnf install -y @php
        dnf install -y php php-{cli,mysqlnd,json,opcache,xml,mbstring,gd,curl}
 
-5) To verify the PHP installation and display the PHP version, use the following command:
+5. To verify the PHP installation and display the PHP version, use the following command:
 
        php -v
 
