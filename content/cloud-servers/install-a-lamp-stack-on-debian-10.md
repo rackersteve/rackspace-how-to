@@ -1,7 +1,7 @@
 ---
 permalink: install-a-lamp-stack-on-debian-10/
 audit_date: '2020-07-24'
-title: 'Install a LAMP Stack on Debian 10'
+title: 'Install a LAMP stack on Debian 10'
 type: article
 created_date: '2020-07-22'
 created_by: Rackspace Support
