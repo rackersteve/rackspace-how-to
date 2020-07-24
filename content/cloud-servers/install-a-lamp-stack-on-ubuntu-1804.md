@@ -1,7 +1,7 @@
 ---
 permalink: install-a-lamp-stack-on-ubuntu-1804/
 audit_date: '2020-07-24'
-title: 'Installing a LAMP Stack on Ubuntu 18.04'
+title: 'Installing a LAMP stack on Ubuntu 18.04'
 type: article
 created_date: '2020-07-22'
 created_by: Rackspace Support
