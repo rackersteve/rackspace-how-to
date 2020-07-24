@@ -1,7 +1,7 @@
 ---
 permalink: install-nginx-on-ubuntu/
-audit_date:
-title: Install nginx on Ubuntu
+audit_date: '2020-07-23'
+title: Install Nginx on Ubuntu
 type: article
 created_date: '2020-07-17'
 created_by: John Garcia
@@ -11,68 +11,68 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
+Nginx&reg; is a web-server service, which has gained almost as much market share as Apache&reg; in recent years
+due to its excellent performance and flexible feature set.  This guide describes how to install Nginx and discusses
+the next steps to set up Nginx to serve your site or application.
 
-Nginx is a web-server service which has gained almost as much market share as Apache in recent years due to its excellent performance and flexible feature set.  This guide will go through the installation instructions and discuss next steps in setting up Nginx to serve your site or application.
+### Prerequisites:
 
-#### Prerequisites:
+You need a Linux&reg; server running the Ubuntu&reg; operating system.
 
-• Linux server running Ubuntu.
+### Install Nginx on Ubuntu
 
-### Installing Nginx on Ubuntu
+The default repositories for most popular Linux distributions, including Ubuntu, make Nginx available. Running an update
+before installing new packages allows the installer to select the most up-to-date version of the package available on the
+repository for installation. To install Nginx, perform the following steps:
 
-Nginx is available in the default repositories for most popular Linux distributions including Ubuntu.  
+1. Run the following apt package-manager commands:
 
-- To install run the following apt package-manager commands:
+       sudo apt update
+       sudo apt install nginx
 
-    ```
-    sudo apt update
-    sudo apt install nginx
-    ```
+2. To enable and start the service and add it to the startup, run the following commands:
 
-    Running an update before installing new packages allows the most up-to-date version of the package available on the repository to be the one chosen for installation.
-
-- To enable and start the service and add it to the startup, run the following command:
-
-    ```
-    sudo systemctl enable nginx
-    sudo systemctl start nginx
-    ```
+       sudo systemctl enable nginx
+       sudo systemctl start nginx
 
 ### Enable firewall access for Nginx
 
-By default Nginx sends traffic on the default ports for HTTP and HTTPS, 80 and 443 respectively.  However, traffic to be received on these ports needs to be enabled. Nginx makes this easy for us as it registers itself as a service within UFW.
+By default, Nginx sends traffic on the default ports for HTTP (`80`) and HTTPS (443). However, you need to
+enable these ports to receive traffic. Nginx makes this easy because it registers itself as a service
+within Uncomplicated Firewall, UFW. To enable firewall access, perform the following steps:
 
-- Run the following command to view available services on UFW:
+1. Run the following command to view available services on UFW:
 
-    ```
-    sudo ufw app list
-    ```
+       sudo ufw app list
 
-    **Note**  If you wish to have a redirect from HTTP to HTTPS you will want to select Full.
+2. Run the following command to configure the appropriate setting for your site. Replace **<selection>** with your choice:
+
+       sudo ufw allow 'Nginx <selection>'
+    
+    **Note**  If you want to redirect HTTP traffic to HTTPS, select the `Full` option.
 
     | Full | HTTP and HTTPS |
     | HTTP | HTTP only      |
     | HTTPS | HTTPS only    |
 
-- Run the following command to configure the appropriate setting for your site replacing **<selection>** with your choice:
-
-    ```
-    sudo ufw allow 'Nginx <selection>'
-    ```
-
-    **Note:**  We recommend opening the port or ports needed by your application, as minimizing the number of available ports is a security best practice.
+    **Note:**  We recommend opening only the port or ports needed by your application. Minimizing the number of
+    available ports is a security best practice.
 
 ### Test Nginx
 
-- Type the website IP address in the web browser and you should see a splash page with Nginx's logo and a "Welcome to Nginx" message.  If you do not see this:
+Type the website IP address in the web browser. You should see a splash page with the Nginx logo and a
+"Welcome to Nginx" message.  If you do not see this, check following items:
 
-  - Double check the IP.
-  - Check if Nginx is running using:
+- Verify the IP address.
 
-    `sudo service status nginx`
-  - Double check firewall access for Nginx.  
+- Check whether Nginx is running by using the following command:
 
+      sudo service status nginx
+    
+- Verify the firewall access for Nginx.  
 
-### Next Steps
+### Next steps
 
-Now that Nginix is installed and ready to start serving your application or website.  You can utilize the default configuration to serve a site by placing its content at /var/www/html in your filesystem.  However, if you wish to serve more than one site it is recommended that you set up Nginx server blocks to accommodate.
+Now that you installed Nginx, it is ready to start serving your application or website.  You can use the default
+configuration to serve a site by placing its content at **/var/www/html** in your filesystem. However, if you want
+to serve more than one site, we recommend that you set up Nginx server blocks to accommodate this need.
