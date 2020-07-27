@@ -5,39 +5,36 @@ title: Install nginx on Windows
 type: article
 created_date: '2020-07-17'
 created_by: John Garcia
-last_modified_date: '2020-07-24'
+last_modified_date: '2020-07-27'
 last_modified_by: Rose Morales
 product: Cloud Servers
 product_url: cloud-servers
 ---
 
-Nginx is a web-server service which has gained almost as much market share as Apache in recent years due to its excellent performance and flexible feature set.  This guide will go through installation instructions and discuss next steps in setting up Nginx to serve your site or application.
+Nginx&reg; is a web-server service, which has gained almost as much market share as Apache&reg; in recent years due to its excellent performance and flexible feature set.  This guide describes how to install Nginx and discusses
+the next steps to set up Nginx to serve your site or application.
 
-#### Prerequisites:
+### Prerequisites:
 
-• A server running a version of Windows Server
+You need a server running a version of Windows&reg; Server operating system.
 
 ### Nginx installation on Windows&reg; Server
 
-Nginx comes pre-compiled direct from their website, which makes installation as simple as downloading and extracting the file.  
+Nginx comes pre-compiled direct from their website, which makes installation as simple as downloading and extracting a file.  
 
-- Download the latest mainline release from http://nginx.org/en/download.html
+1. Download the latest mainline release from http://nginx.org/en/download.html
 
-- Extract the file to the location you wish to install Nginx.  
+2. Extract the file to the location you wish to install Nginx.  
 
     **Note** We recommend creating a new directory for Nginx to live:
 
-    ```
-    C:\nginx
-    ```
+       C:\nginx
 
 ### Test installation
 
 - Open a CMD prompt and start Nginx with the following command:
 
-    ```
-    C:\nginxnginx.exe
-    ```
+      C:\nginx\nginx.exe
 
     **Note** Replace `C:\` with the directory location where the Nginix was extracted.
 
