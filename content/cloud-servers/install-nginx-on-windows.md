@@ -46,8 +46,6 @@ If you see "Welcome to Nginx," everything is working as intended.
 The Nginx project considers the Windows release to be in beta. Functionally, this release is similar to Unix releases, but
 some features are missing. For further information, see [nginx for Windows](http://nginx.org/en/docs/windows.html).
 
-Nginx does not run as a service in Windows, so it doesn't restart automatically based on your settings in the **Local Services** options.
-
 ### Next steps
 
 If you want to serve more than one site, we recommend that you set up Nginx server blocks to accommodate this need.
