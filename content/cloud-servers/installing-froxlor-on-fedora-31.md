@@ -35,10 +35,10 @@ Froxlor is an open-source server management software designed to simplify server
 
         mysql
 
-4. Within the MySQL prompt, set the root password with these commands. Make sure to replace <PASSWORD> with the password you choose.
+4. Within the MySQL prompt, set the root password with these commands. Make sure to replace **<password>** with the password you choose.
 
         alter user 'root'@'localhost' identified via mysql_native_password;
-        alter user 'root'@'localhost' identified by 'VhfbAQHmY3h2yJQ7VrdK';
+        alter user 'root'@'localhost' identified by 'password';
 
 5. Exit MariaDB.
 
@@ -46,49 +46,49 @@ Froxlor is an open-source server management software designed to simplify server
 
 ### Install Froxlor
 
-We’ll download and install Froxlor in the /var/www/html/  directory. Change directory:
+1. Change into directory /var/www/html.
 
-    cd /var/www/html
+        cd /var/www/html
 
-Download Froxlor:
+2. Download Froxlor.
 
-    wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
+        wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
 
-Extract files:
+3. Extract the files.
 
-    sudo tar -xzf froxlor-latest.tar.gz
+        sudo tar -xzf froxlor-latest.tar.gz
 
-Delete the tarball:
+4. Delete the archive.
 
-    rm froxlor-latest.tar.gz
+        rm froxlor-latest.tar.gz
 
-Change ownership to apache:
+5. Change ownership to Apache.
 
-    chown -R apache:apache /var/www/html/froxlor
+        chown -R apache:apache /var/www/html/froxlor
 
-Firewall: Before we can proceed, we need to open up ports 80 and 443 in the firewall.
+### Firewall configuration
 
-Open port 80:
+1. Open up port for  HTTP (`80`) and HTTPS (`443`).
 
-    firewall-cmd --zone=public --add-service=http --permanent
+        firewall-cmd --zone=public --add-service=http --permanent
+        firewall-cmd --zone=public --add-service=https --permanent
 
-Open port 443:
+2. Reload firewall.
 
-    firewall-cmd --zone=public --add-service=https --permanent
+        firewall-cmd --reload
 
-Reload firewall:
+3. Navigate to http://<Internet_IP_address>/froxlor in your browser.
 
-    firewall-cmd --reload
+4. Select **Start install** to begin. 
 
-Finish Installation In Browser
-In your web browser, navigate to http://<Internet_IP_address>/froxlor
+5. Click on **Click here to continue**.
 
-Click Start install.
+6. Select your language and fill your details. 
 
-All dependencies should be installed and ready to go. Click Click here to continue.
+    **Note** Make sure you provide the same root password set earlier. 
 
-Select your language and input your details. Make sure you give the same MySQL root password you set earlier. Click Click here to continue.
+7. Click on **Click here to continue**.
 
-Froxlor will then finish the install. Once done, click Click here to login.
+8. Select **Click here to login** and the **Login screen** appears. 
 
-You’ll be greeted with a login screen. Log in and Froxlor is ready to go!
+9. Log in and Froxlor is ready to go!
