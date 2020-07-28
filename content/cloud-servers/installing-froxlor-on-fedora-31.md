@@ -20,27 +20,27 @@ Froxlor is an open-source server management software designed to simplify server
 
 ### LAMP installation
 
-Before installing Froxlor, we’ll first install the LAMP, the web service stack of Linux&reg; Apache, MariaDB, and PHP, with DNF.
+1. We need to install LAMP first, the web service stack of Linux&reg; Apache&reg;, MariaDB&reg;, and PHP&reg;, using DNF command.
 
-    dnf install httpd mariadb-server @php php-posix php-bcmath php-zip php-mysqlnd php-pdo
+        dnf install httpd mariadb-server @php php-posix php-bcmath php-zip php-mysqlnd php-pdo
 
-Next, we’ll start and enable Apache and MariaDB:
+2. Start and enable the Apache and MariaDB service.
 
-    systemctl start httpd
-    systemctl enable httpd
-    systemctl start mariadb
-    systemctl enable mariad
+        systemctl start httpd
+        systemctl enable httpd
+        systemctl start mariadb
+        systemctl enable mariad
 
-Access your local MariaDB installation with the MySQL command:
+3. Access your local MariaDB installation.
 
-    mysql
+        mysql
 
-In the MySQL prompt, run these two commands to set the root password. Make sure to replace <PASSWORD> with the password you choose.
+4. Within the MySQL prompt, set the root password with these commands. Make sure to replace <PASSWORD> with the password you choose.
 
-    alter user 'root'@'localhost' identified via mysql_native_password;
-    alter user 'root'@'localhost' identified by 'VhfbAQHmY3h2yJQ7VrdK';
+        alter user 'root'@'localhost' identified via mysql_native_password;
+        alter user 'root'@'localhost' identified by 'VhfbAQHmY3h2yJQ7VrdK';
 
-Exit MariaDB:
+5. Exit MariaDB.
 
     exit
 
