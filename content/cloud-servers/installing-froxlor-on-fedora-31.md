@@ -1,69 +1,85 @@
 ---
-permalink: installing-froxlor-on-fedora-31/
-audit_date:
+permalink: install-froxlor-on-fedora-31/
+audit_date: '2020-07-22'
 title: 'Install Froxlor on Fedora 31'
 type: article
 created_date: '2020-07-22'
 created_by: Rackspace Support
-last_modified_date:
-last_modified_by:
+last_modified_date: '2020-07-27'
+last_modified_by: Rose Morales
 product: Cloud Product
 product_url: cloud-product
 ---
 
 Froxlor is an open-source server management software designed to simplify server management through a web interface. This guide will walk you through installing Froxlor on a Fedora 31 server.
 
-Prerequisites:
-A Cloud Server Running Fedora 31
-SSH Access as root or an equally privileged user
-Install LAMP Stack
-Before installing Froxlor, we’ll first install the LAMP (Linux Apache MariaDB PHP) stack with DNF:
+### Prerequisites
 
-dnf install httpd mariadb-server @php php-posix php-bcmath php-zip php-mysqlnd php-pdo
+- You need a Linux&reg; server running distribution Fedora version 31.
+- A user with SSH administrator privileges.
+
+### LAMP installation
+
+Before installing Froxlor, we’ll first install the LAMP, the web service stack of Linux&reg; Apache, MariaDB, and PHP, with DNF.
+
+    dnf install httpd mariadb-server @php php-posix php-bcmath php-zip php-mysqlnd php-pdo
+
 Next, we’ll start and enable Apache and MariaDB:
 
-systemctl start httpd
-systemctl enable httpd
-systemctl start mariadb
-systemctl enable mariad
+    systemctl start httpd
+    systemctl enable httpd
+    systemctl start mariadb
+    systemctl enable mariad
+
 Access your local MariaDB installation with the MySQL command:
 
-mysql
+    mysql
+
 In the MySQL prompt, run these two commands to set the root password. Make sure to replace <PASSWORD> with the password you choose.
 
-alter user 'root'@'localhost' identified via mysql_native_password;
-alter user 'root'@'localhost' identified by 'VhfbAQHmY3h2yJQ7VrdK';
+    alter user 'root'@'localhost' identified via mysql_native_password;
+    alter user 'root'@'localhost' identified by 'VhfbAQHmY3h2yJQ7VrdK';
+
 Exit MariaDB:
 
-exit
-Install Froxlor
+    exit
+
+### Install Froxlor
+
 We’ll download and install Froxlor in the /var/www/html/  directory. Change directory:
 
-cd /var/www/html
+    cd /var/www/html
+
 Download Froxlor:
 
-wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
+    wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
+
 Extract files:
 
-sudo tar -xzf froxlor-latest.tar.gz
+    sudo tar -xzf froxlor-latest.tar.gz
+
 Delete the tarball:
 
-rm froxlor-latest.tar.gz
+    rm froxlor-latest.tar.gz
+
 Change ownership to apache:
 
-chown -R apache:apache /var/www/html/froxlor
-Firewall
-Before we can proceed, we need to open up ports 80 and 443 in the firewall.
+    chown -R apache:apache /var/www/html/froxlor
+
+Firewall: Before we can proceed, we need to open up ports 80 and 443 in the firewall.
 
 Open port 80:
 
-firewall-cmd --zone=public --add-service=http --permanent
+    firewall-cmd --zone=public --add-service=http --permanent
+
 Open port 443:
 
-firewall-cmd --zone=public --add-service=https --permanent
+    firewall-cmd --zone=public --add-service=https --permanent
+
 Reload firewall:
 
-firewall-cmd --reload
+    firewall-cmd --reload
+
 Finish Installation In Browser
 In your web browser, navigate to http://<Internet_IP_address>/froxlor
 
