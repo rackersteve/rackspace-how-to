@@ -11,7 +11,7 @@ product: Cloud Product
 product_url: cloud-product
 ---
 
-Froxlor is an open-source server management software designed to simplify server management through a web interface. This guide will walk you through installing Froxlor on a Fedora 31 server.
+Froxlor is an open-source server management software designed to simplify server management through a web interface. This guide describes how to install Froxlor on a Fedora&reg; 31 server.
 
 ### Prerequisites
 
@@ -19,6 +19,8 @@ Froxlor is an open-source server management software designed to simplify server
 - A user with SSH administrator privileges.
 
 ### LAMP installation
+
+Perform the following steps to install the LAMP:
 
 1. We need to install LAMP first, the web service stack of Linux&reg; Apache&reg;, MariaDB&reg;, and PHP&reg;, using DNF command.
 
@@ -37,16 +39,18 @@ Froxlor is an open-source server management software designed to simplify server
 
 4. Within the MySQL prompt, set the root password with these commands. Make sure to replace **<password>** with the password you choose.
 
-        alter user 'root'@'localhost' identified via mysql_native_password;
-        alter user 'root'@'localhost' identified by 'password';
+       alter user 'root'@'localhost' identified via mysql_native_password;
+       alter user 'root'@'localhost' identified by 'password';
 
 5. Exit MariaDB.
 
-    exit
+       exit
 
 ### Install Froxlor
 
-1. Change into directory /var/www/html.
+Perform the following steps to install Froxlor:
+
+1. Change into directory **/var/www/html**.
 
         cd /var/www/html
 
@@ -68,6 +72,8 @@ Froxlor is an open-source server management software designed to simplify server
 
 ### Firewall configuration
 
+Perform the following steps to configure the firewall:
+
 1. Open up port for  HTTP (`80`) and HTTPS (`443`).
 
         firewall-cmd --zone=public --add-service=http --permanent
@@ -77,7 +83,7 @@ Froxlor is an open-source server management software designed to simplify server
 
         firewall-cmd --reload
 
-3. Navigate to http://<Internet_IP_address>/froxlor in your browser.
+3. Navigate to **http://<Internet_IP_address>/froxlor** in your browser.
 
 4. Select **Start install** to begin. 
 
@@ -91,4 +97,4 @@ Froxlor is an open-source server management software designed to simplify server
 
 8. Select **Click here to login** and the **Login screen** appears. 
 
-9. Log in and Froxlor is ready to go!
+9. Log in, and Froxlor is ready to go!
