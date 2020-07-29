@@ -175,12 +175,9 @@ support team through the MyRackspace Portal.
 #### Where is data stored if I create a snapshot, copy as clone, or template?
 
 -   Snapshots are stored with the parent disk of VM and consume your
-    allocated storage infrastructure. Snapshots must be carefully managed to
-    ensure that they don't consume all the disk space.
--   Clones are stored on the Rackspace infrastructure, so they don't use
-    allocated disk resources. You can create one clone per VM.
--   Templates are stored on the Rackspace infrastructure. You can create
-    one template per VM.
+    allocated storage infrastructure. You must carefully manage snapshots to
+    ensure that they don’t consume all the disk space.
+-   You must have sufficient additional storage to store clones and templates.
 
 #### How can I expand or shrink my virtual disk?
 
