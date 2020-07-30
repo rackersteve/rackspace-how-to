@@ -7,8 +7,8 @@ created_date: '2020-07-22'
 created_by: Rackspace Support
 last_modified_date: '2020-07-27'
 last_modified_by: Rose Morales
-product: Cloud Product
-product_url: cloud-product
+product: Cloud Servers
+product_url: cloud-servers
 ---
 
 Froxlor is an open-source server management software designed to simplify server management through a web interface. This guide describes how to install Froxlor on a Fedora&reg; 31 server.
