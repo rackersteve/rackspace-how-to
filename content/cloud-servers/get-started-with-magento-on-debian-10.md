@@ -7,8 +7,8 @@ created_date: '2020-07-24'
 created_by: Rackspace Support
 last_modified_date: '2020-07-30'
 last_modified_by: Cat Lookabaugh
-product: Cloud Product
-product_url: cloud-product
+product: Cloud Servers
+product_url: cloud-servers
 ---
 
 Magento&reg;, written in PHP, is one of the most popular open e-commerce systems on the web today.
@@ -21,7 +21,7 @@ MySQL&reg; or MariaDB&reg;, PHP.
 
 ### Requirements: 
 
-You need access to a cloud server with at least 4 GB of RAM.
+You need access to a Debian&reg; 10 cloud server with at least 4 GB of RAM.
 
 You also need to create a Magento user and update the package management repositories.
 
