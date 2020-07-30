@@ -7,8 +7,8 @@ created_date: '2020-07-22'
 created_by: Rackspace Support
 last_modified_date:
 last_modified_by:
-product: Cloud Product
-product_url: cloud-product
+product: Cloud Servers
+product_url: cloud-servers
 ---
 
 In this guide, we’ll go through the initial setup of Froxlor post installation. If you haven’t yet installed Froxlor, use this article to do so before proceeding.
@@ -22,7 +22,7 @@ For now, ignore the System not configured yet. Click here to go to configuration
 
 Here you can configure SSL and a host of other settings. I won’t go over them all in this article as there are so many, but it’s a good idea to click on each sub settings menu and look at every option before configuring services.
 
-###Services
+### Services
 
 Once the system settings are ready, click on Configuration under System. Here you can either go through the prompts and manually run every command for every service you need, or you can run the PHP script at the bottom. As the script is a bit faster, I’ll be using that. Copy the script and paste it into your server’s terminal. Make sure to prepend sudo if you are not logged in as root.
 
@@ -37,7 +37,7 @@ A new script will then be generated to install and configure all the services. E
 
 You’ll be prompted for permission to install software a few times before the script is complete. You’ll see a message “All services have been configured” once complete.
 
-###Create a Customer
+### Create a Customer
 
 Now that the services have been configured. We can create our first customer user. Click on Customers under Resources.
 
