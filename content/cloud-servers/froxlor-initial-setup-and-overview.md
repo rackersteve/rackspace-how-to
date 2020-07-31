@@ -1,50 +1,59 @@
 ---
 permalink: froxlor-initial-setup-and-overview/
-audit_date:
-title: 'Froxlor Initial Setup and Overview'
+audit_date: '2020-07-22'
+title: 'Froxlor initial setup and overview'
 type: article
 created_date: '2020-07-22'
 created_by: Rackspace Support
-last_modified_date:
-last_modified_by:
+last_modified_date: '2020-07-30'
+last_modified_by: Rose Morales
 product: Cloud Servers
 product_url: cloud-servers
 ---
 
-In this guide, we’ll go through the initial setup of Froxlor post installation. If you haven’t yet installed Froxlor, use this article to do so before proceeding.
+This guide will go through the initial setup of Froxlor post installation.
 
 ### Prerequisites
 
-A Cloud Server Running with Froxlor installed
-SSH Access as root or an equally privileged user
-Settings
-For now, ignore the System not configured yet. Click here to go to configurations message at the top of the panel as the setting should be configured before services. To get to settings, click on Settings under System in the left panel.
+- You need a server running a Linux&reg; distribution.
+- A user with SSH administrator privileges.
 
-Here you can configure SSL and a host of other settings. I won’t go over them all in this article as there are so many, but it’s a good idea to click on each sub settings menu and look at every option before configuring services.
+### Settings
+
+1. Select the message **Click here to go to configurations** at the top of the panel.
+
+2. Click on **Settings** under **System** in the left panel.
+
+3. It’s recommended to click on each sub settings menu and look at every option before configuring services.
 
 ### Services
 
-Once the system settings are ready, click on Configuration under System. Here you can either go through the prompts and manually run every command for every service you need, or you can run the PHP script at the bottom. As the script is a bit faster, I’ll be using that. Copy the script and paste it into your server’s terminal. Make sure to prepend sudo if you are not logged in as root.
+1. Once the system settings are ready, click on **Configuration** under **System**. 
 
+2. Copy the PHP script at the bottom and paste it into your server’s terminal. 
 
-Once you run the script, you’ll be asked a series of questions about the server you are running and the services you want to use. The first question will be what operating system you are using. For this guide, I’m using Debian 10 (Buster). Make sure to replace that with the operating system you are using.
+    **Note**: Make sure to prepend sudo if you are not logged in as root.
 
-You’ll then be asked what web, DNS, SMTP, mail, and FTP servers you want to run. Unless you have a preference, the default values are fine.
+    After you run the script, a series of questions will appear about the server you are running and the services you want to use.
 
-Next, you’ll be asked about a few more services. Enter each one you want manually and then enter an empty value once you’ve selected all you need.
+3. Enter the operating system you are using.
 
-A new script will then be generated to install and configure all the services. Enter “y” to run the script immediately.
+4. Select the web, DNS, SMTP, mail, and FTP servers you want to run. Unless you have a preference, select the default values.
 
-You’ll be prompted for permission to install software a few times before the script is complete. You’ll see a message “All services have been configured” once complete.
+5. Next, answer each prompt as required, then enter an empty value once you’ve selected all you need.
+
+6. A new script gets generated to install and configure all the services. Enter “y” to run the script and hit **Enter**.
+
+7. Provide **Administrator** permissions when prompted for the script to complete. Once the installation finishes the message **“All services have been configured”** will display.
 
 ### Create a Customer
 
-Now that the services have been configured. We can create our first customer user. Click on Customers under Resources.
+1. Now we can create our first customer user. Click on **Customers** under **Resources**.
 
-Click Create Customer.
+2. Click **Create Customer**.
 
-Input the account details.
+3. Input the account details.
 
-Input contact information.
+4. Input contact information.
 
-Input quota and access details.
+5. Input quota and access details and click the **Save** button.
