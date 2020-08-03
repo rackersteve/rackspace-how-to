@@ -11,44 +11,45 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
-This guide will go through the initial setup of Froxlor post installation.
+This guide describes how to set up of Froxlor after installation.
 
 ### Prerequisites
 
-- You need a server running a Linux&reg; distribution.
-- A user with SSH administrator privileges.
+- A server running a Linux&reg; distribution
+- A user with SSH administrator privileges
 
 ### Settings
 
 1. Select the message **Click here to go to configurations** at the top of the panel.
 
-2. Click on **Settings** under **System** in the left panel.
+2. Click on **System -> Settings** in the left panel.
 
-3. It’s recommended to click on each sub settings menu and look at every option before configuring services.
+3. Click on each sub-settings menu and look at every option before configuring services.
 
 ### Services
 
-1. Once the system settings are ready, click on **Configuration** under **System**. 
+1. After the system settings are ready, click on **System -> Configuration**. 
 
-2. Copy the PHP script at the bottom and paste it into your server’s terminal. 
+2. Copy the PHP script at the bottom of the page and paste it into your server’s terminal. 
 
-    **Note**: Make sure to prepend sudo if you are not logged in as root.
+    **Note**: If you are not logged in as root, put `sudo` before the comman.
+    
+    After you run the script, a series of questions display about the server you are running and the services you want to use.
 
-    After you run the script, a series of questions will appear about the server you are running and the services you want to use.
-
-3. Enter the operating system you are using.
+3. Enter your operating system.
 
 4. Select the web, DNS, SMTP, mail, and FTP servers you want to run. Unless you have a preference, select the default values.
 
-5. Next, answer each prompt as required, then enter an empty value once you’ve selected all you need.
+5. Next, answer each prompt as required. After you select all you need, enter an empty value.
 
-6. A new script gets generated to install and configure all the services. Enter “y” to run the script and hit **Enter**.
+6. THe system generates a new script to install and configure all the services. Enter **y** to run the script and press **Enter**.
 
-7. Provide **Administrator** permissions when prompted for the script to complete. Once the installation finishes the message **“All services have been configured”** will display.
+7. Provide **Administrator** permissions when prompted. After the installation finishes, the message 
+   **“All services have been configured”** displays.
 
 ### Create a Customer
 
-1. Now we can create our first customer user. Click on **Customers** under **Resources**.
+1. Now, you can create your first customer user. Click on **Resources -> Customers**.
 
 2. Click **Create Customer**.
 
@@ -56,4 +57,4 @@ This guide will go through the initial setup of Froxlor post installation.
 
 4. Input contact information.
 
-5. Input quota and access details and click the **Save** button.
+5. Input quota and access details and click **Save**.
