@@ -32,7 +32,7 @@ This guide describes how to set up of Froxlor after installation.
 
 2. Copy the PHP script at the bottom of the page and paste it into your server’s terminal. 
 
-    **Note**: If you are not logged in as root, put `sudo` before the comman.
+    **Note**: If you are not logged in as root, put `sudo` before the command.
     
     After you run the script, a series of questions display about the server you are running and the services you want to use.
 
@@ -42,7 +42,7 @@ This guide describes how to set up of Froxlor after installation.
 
 5. Next, answer each prompt as required. After you select all you need, enter an empty value.
 
-6. THe system generates a new script to install and configure all the services. Enter **y** to run the script and press **Enter**.
+6. The system generates a new script to install and configure all the services. Enter **y** to run the script and press **Enter**.
 
 7. Provide **Administrator** permissions when prompted. After the installation finishes, the message 
    **“All services have been configured”** displays.
