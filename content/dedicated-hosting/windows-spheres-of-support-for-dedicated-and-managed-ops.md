@@ -25,7 +25,7 @@ The following operating systems are supported for both Dedicated and Managed Clo
 | Windows Server 2008 R2 | Yes                                 |                         |                        | Yes                |                   |                      |
 | Windows Server 2012    | Yes                                 |                         |                        |                    |                   |                      |
 | Windows Server 2012 R2 | Yes                                 | Yes                     | Yes                    | Yes                | Yes               | Yes                  |
-| Windows Server 2016    | Yes                                 | Yes                     |                        | Yes                | Yes               | Yes                  |
+| Windows Server 2016    | Yes                                 | Yes                     | Yes                    | Yes                | Yes               | Yes                  |
 | Windows Server 2019    | Yes                                 | Yes                     | Yes                    | Yes                | Yes               | Yes                  |
 
 **Note**: Rackspace makes every effort to align our support dates for operating systems with the manufacturer's support dates. If a manufacturer decides to shorten the support life of an operating system, Rackspace might be forced to end support sooner than originally anticipated. For full details on support life, see the [Rackspace EOL Terms](https://www.rackspace.com/information/legal/eolterms).
@@ -56,13 +56,11 @@ The following types of web servers (IIS) are supported in the indicated areas:
 
 ### Active Directory
 
-| Feature/Operation  | Installation | Configuration | Troubleshooting |
-| ------------------ | ------------ | ------------- | --------------- |
-| Domain Services    | Yes          | Yes           | Yes             |
-| DNS                | Yes          | Yes           | Yes             |
-| Common GPO support | Yes          | Yes*          | Yes*            |
-
-* The Common GPO support includes Rackspace domains
+| Feature/Operation | Installation | Configuration | Troubleshooting |
+| ----------------- | ------------ | ------------- | --------------- |
+| Domain Services   | Yes          | Yes           | Yes             |
+| DNS               | Yes          | Yes           | Yes             |
+| Group Policy      | Yes          | Yes           | Yes             |
 
 
 ### Remote Desktop Services
@@ -100,18 +98,10 @@ The following types of web servers (IIS) are supported in the indicated areas:
 | Rackspace Managed Antivirus                     | Yes          | Yes           | Yes             |
 | Rackspace Managed Backup                        | Yes          | Yes           | Yes             |
 | Rackspace Windows Server Update Services (WSUS) | Yes          |               |                 |
-| Files and Folders transfer between servers      | Yes          |               |                 |
+| Files and Folders transfer between servers      | Yes          | Yes           | Yes             |
+| In-Place OS Upgrade                             | Yes          | Yes           | Yes             |
 
 **Note**: Additional Rackspace licensing and service agreements are required.
-
-### Windows OS Billable services
-
-| Feature/Operation                          | Configuration | Troubleshooting |
-| ------------------------------------------ | ------------- | --------------- |
-| Files and Folders transfer between servers | Yes              | Yes                |
-| OS In-Place Upgrade                        | Yes              | Yes                |
-
-* OS Billable Services support has an hourly fee with a minimum of one hour.
 
 
 ### Microsoft SQL
