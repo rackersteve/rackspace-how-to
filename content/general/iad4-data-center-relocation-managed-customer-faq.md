@@ -32,8 +32,8 @@ Colocation Customer FAQ.
 ### When will the relocation take place?
 
 Rackspace assigns all customers on managed infrastructure to a move group, which
-we will schedule for a date in October 2020. We schedule the move groups to run
-in a maintenance window starting on either a Friday or Saturday night and running
+we will schedule for a date in September or October 2020. We schedule the move groups
+to run in a maintenance window starting on either a Friday or Saturday night and running
 through to the following morning. We plan to keep the maintenance window shorter
 than 12 hours. We will confirm the exact timings when we allocate the move groups,
 at least 60 days in advance of the move date.
