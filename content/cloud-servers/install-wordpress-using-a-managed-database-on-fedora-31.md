@@ -78,7 +78,7 @@ LAMP is an acronym for Linux, Apache, MySQL, PHP. These are all requirements for
 
     chown -R apache /var/www/html/wordpress
 
-4. It is recommended to configure a vhost to serve WordPress to add more sites in the future. To set up the vhost, open the /etc/httpd/conf/httpd.conf file with a text editor and add the following code to the end of your file. Remember to change the fields to match your site’s hostname and name log files. In this case, we’ll use wordpress.domain.com as an example.
+4. We recommended to configure a vhost to serve WordPress to add more sites in the future. To set up the vhost, open the /etc/httpd/conf/httpd.conf file with a text editor and add the following code to the end of your file. Remember to change the fields to match your site’s hostname and name log files. In this case, we’ll use wordpress.domain.com as an example.
 
     ServerAdmin username@wordpress.domain.com
     DocumentRoot /var/www/html/wordpress
