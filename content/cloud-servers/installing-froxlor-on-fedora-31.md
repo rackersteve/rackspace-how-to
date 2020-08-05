@@ -83,7 +83,7 @@ Perform the following steps to configure the firewall:
 
         firewall-cmd --reload
 
-3. Navigate to **http://<Internet_IP_address>/froxlor** in your browser.
+3. Navigate to **http://your.ip.address.here/froxlor** in your browser.
 
 4. Select **Start install** to begin. 
 
