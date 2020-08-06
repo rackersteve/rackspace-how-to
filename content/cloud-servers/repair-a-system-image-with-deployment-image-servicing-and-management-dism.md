@@ -15,7 +15,7 @@ Deployment Image Servicing and Management (DISM) is a Windows&reg; built-in
 command-line tool used to prepare, modify, and repair Windows system images.
 You can save images and use them to deploy and restore the Windows operating
 system. Use DISM to repair your system when it does not boot properly, when you get
-a blue screen error, or when a [System File Check (SFC)](/how-to/repairing-system-files-with-system-file-check-tool/)
+a blue screen error, or when a [System File Check (SFC)](/how-to/repair-system-files-with-system-file-check-tool/)
 does not resolve it.
 
 **Note** This task requires a user with administrative privileges on the server.
