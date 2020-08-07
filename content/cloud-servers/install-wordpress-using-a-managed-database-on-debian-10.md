@@ -7,8 +7,8 @@ created_date: '2020-07-24'
 created_by: Rackspace Support
 last_modified_date: '2020-08-06'
 last_modified_by: Rose Morales
-product: Cloud Server
-product_url: cloud-server
+product: Cloud Servers
+product_url: cloud-servers
 ---
 
 WordPress&reg; is a simple content management system based on PHP&reg; and MySQL&reg; and has features that simplify the setup and customization of a website or blog, which is part of what makes it so popular. It is estimated that about one-third of the sites on the internet run on WordPress. In addition to its ease of use, several plugins provide additional features.
