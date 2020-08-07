@@ -1,11 +1,11 @@
 ---
 permalink: o365-spheres-of-support/
-audit_date: '2020-07-09'
+audit_date:
 title: Microsoft 365 Spheres of Support
 type: article
 created_date: '2020-07-31'
 created_by: John Kowalik
-last_modified_date: '2020-07-31'
+last_modified_date: '2020-08-06'
 last_modified_by: Nicholas Ramirez
 product: Office 365
 product_url: office-365
