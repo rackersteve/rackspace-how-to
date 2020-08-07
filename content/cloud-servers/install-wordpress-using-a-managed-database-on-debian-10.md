@@ -1,152 +1,155 @@
 ---
-permalink: install-wordpress-using-a-managed-database-on-debian-10/
-audit_date:
-title: 'Install WordPress using a Managed Database on Debian 10'
+permalink: install-wordpress-using-a-managed-database-on-debian-10-ubuntu-18-20/
+audit_date: '2020-07-24'
+title: 'Install WordPress using a managed database on Debian 10, Ubuntu 18.04, and 20.04'
 type: article
 created_date: '2020-07-24'
 created_by: Rackspace Support
-last_modified_date:
-last_modified_by:
-product: Cloud Product
-product_url: cloud-product
+last_modified_date: '2020-08-06'
+last_modified_by: Rose Morales
+product: Cloud Server
+product_url: cloud-server
 ---
 
-WordPress is a simple content management system based on PHP and MySQL. It is estimated that about one-third of the sites on the internet run on WordPress. WordPress has many features that simplify the setup and customization of a website or blog, which is part of what makes it so popular. In addition to its ease of use, there are many plugins that can add additional features. This guide will walk you through a quick and easy install of WordPress, but in this case, we’ll be using a remote database separate from our web server, to allow us to scale easily in the future.
+WordPress&reg; is a simple content management system based on PHP&reg; and MySQL&reg; and has features that simplify the setup and customization of a website or blog, which is part of what makes it so popular. It is estimated that about one-third of the sites on the internet run on WordPress. In addition to its ease of use, several plugins provide additional features.
 
-###Prerequisites: 
+This guide describes how to install WordPress, using a remote database separate from our server, to scale in the future.
 
-• A Cloud Server Running Debian 10
-• SSH Access as root or equally privileged user
+### Prerequisites
 
+- A Linux&reg; server running the Debian distribution version 10, Ubuntu version 18.04, or 20.04
+- A user with SSH administrator privileges
 
-###Create the database
+### Create a database
 
-Take note of the IP address provided, this is the IP address that we’ll direct the webserver to connect to the database. For this article, we’ll create a database called ‘wordpress’ and the username ‘wpadmin’.
+For this article, we’ll create a database called `wordpress` and the username `wpadmin`.
 
-Configure Web Server
+### Creating the sudo user
 
-This article assumes that while you have SSH access as root to your Debian 10 VM, you’ve not made any other changes. So we’ll be going through the process of creating a sudo user, setting up LAMP, installing and configuring WordPress, and adjusting our firewall rules.
+Sudo users are beneficial because they allow normal users to operate within the server with root user permissions.
 
-###Creating the sudo user
+1. Log into your server and run the following command to create a new user. Replace `username` with the username you want.
 
-Sudo users are beneficial because they would allow normal users to operate within the server as if they were a root user. This section of the guide will take you through setting up a sudo user.
+    adduser username
 
-1) Log into your server as the root user over SSH and run the following command to create a new user. Replace ‘userbob’ with the username you want to be created.
+2. Add the new user to the group with administrative privileges.
 
-# adduser userbob
-2) Once you are returned to the command line, it’s time to add our new user to the group which has sudo privileges. In Debian, there is always a ‘sudo’ group that provides sudo privileges to any users within it.
+    usermod -aG sudo username
 
-# usermod -aG sudo userbob
-3) Now, you can use the su command to switch to our new user so that we can test their sudo access:
+3. Use the `su` command to switch to our new user and test the sudo access.
 
-# su - userbob
-You can try running a command now, but when using a sudo user, you will have to prepend all your commands with ‘sudo’. Example:
- 
-# sudo ls -lah
-If this is the first time you’ve used sudo in a session, you’ll be required to enter your password for the account you’re sudo’ing as. Once you’ve entered the password the command should proceed and provide the output.
+    su - userbob
 
-###Setting up the LAMP stack
+4. You can try running a command now. When using a sudo user, you must place `sudo` before all your commands, as shown in the following example:
 
-LAMP is an acronym for Linux, Apache, MySQL, PHP. These are all requirements for a WordPress server, and this part of the guide will go through installing and making the necessary configurations.
+    sudo ls -lah
 
-1) Download all the software required for LAMP and PHP features that WordPress will require. The following command strings together a list of packages we’ll install.
+**Note**: If this is the first time you’ve used sudo in a session, you need to enter a password. After you enter the password, the command runs.
 
-# sudo apt install apache2 vim php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
-You’ll be prompted a few times to enter Yes(y) or No(n) as the packages are installed. Press Y to install them.
+### Setting up a LAMP stack
 
-2) We’ll also need apache, our web service, running in order to display our WordPress site and accept our connection. Use the following commands to start apache and set it to start on boot:
+LAMP is an acronym for Linux&reg;, Apache&reg;, MySQL&reg;, PHP&reg;. These are all requirements for a WordPress server.
 
-# sudo systemctl start apache2
-# sudo systemctl enable apache2
-Now our LAMP stack is all set up and ready to serve WordPress once we install it.
+1. Download all the software required for LAMP and PHP features. Enter **Y** to proceed with each prompt.
 
-###Installing and Configuring WordPress
+    sudo apt install apache2 vim php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
 
-1) To install WordPress, we first need to download the package that contains all the necessary files. It’s recommended that we move to our temporary directory to download the tar file. We’ll then use the wget command to download the package from the URL provided by WordPress:
+2. Use the following commands to start apache and set it to start on boot.
 
-# sudo cd /tmp
-# sudo wget http://wordpress.org/latest.tar.gz
-2) Now that we’ve downloaded the package, we will want to extract it and place it in our apache web directory:
+    sudo systemctl start apache2
+    sudo systemctl enable apache2
 
-# sudo tar -xvzf latest.tar.gz -C /var/www/html
-3) Now that we’ve created a WordPress folder at /var/www/html/wordpress, we will want to allow apache ownership of that folder. We’ll use this command to make that change:
+### Install Wordpress
 
-# chown -R apache /var/www/html/wordpress
-4) While configuring a vhost to serve WordPress is not required, it will it easier to add more sites in the future if necessary. To set up our vhost, we’ll create a new Apache conf file with the same name as your site. 
+1. To install WordPress, download the package that contains all the necessary files. Move to the temporary directory to download the tar file. Use the `wget` command to download the package from the official URL provided by WordPress.
 
-# sudo nano /etc/apache2/sites-available/wordpress.domain.com.conf
-Once the file is opened, add the following code to the end of your file, but be sure to change the fields to match your own site’s hostname and name log files. In our case, we’ll be using wordpress.domain.com as an example.
+    sudo cd /tmp
+    sudo wget http://wordpress.org/latest.tar.gz
 
-<VirtualHost *:80>
-  ServerAdmin username@wordpress.domain.com
-  DocumentRoot /var/www/html/wordpress
-  ServerName wordpress.domain.com
-  ServerAlias wordpress.domain.com
-  ErrorLog /var/log/apache2/wordpressdomain-error-log
-  CustomLog /var/log/apache2/wordpressdomain-access-log common
-</VirtualHost>
-Be sure to save the file upon exit.
+2. Extract and place it in the Apache web directory to create a WordPress folder at **/var/www/html/wordpress**.
 
-5) Now open port 80 for apache so that it can listen for requests over the web:
+    sudo tar -xvzf latest.tar.gz -C /var/www/html
 
-# sudo ufw allow 80/tcp
-Configuring the WordPress Install
+3. Run the following command to set Apache ownership of that folder.
 
-Our final task is to configure our WordPress install to use our database. The following steps will quickly guide you through this.
+    chown -R apache /var/www/html/wordpress
 
-1) Navigate to the WordPress directory:
+4. We recommend that you configure a vhost to serve WordPress to add more sites in the future. To set up the vhost, open the **/etc/httpd/conf/httpd.conf** file with a text editor and add the following code to the end of your file. Remember to change the fields to match your site’s hostname and name log files. The following example uses **wordpress.domain.com** as an example:
 
-# sudo cd /var/www/html/wordpress
-2) Within this directory, WordPress provides a sample config file, but the easiest thing to do is just to rename it and then edit it to be a working config file. The following command will rename the config file:
+    ServerAdmin username@wordpress.domain.com
+    DocumentRoot /var/www/html/wordpress
+    ServerName wordpress.domain.com
+    ServerAlias wordpress.domain.com
+    ErrorLog /var/log/httpd/wordpressdomain-error-log
+    CustomLog /var/log/httpd/wordpressdomain-acces-log common
 
-# sudo mv wp-config-sample.php wp-config.php
-3) Now we need to open the wp-config.php file with our text editor of choice. Once the file is opened you’ll see a following block of code:
+5. Open the HTTP port (`80`) for Apache so it can listen for requests over the web:
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+    sudo ufw allow 80/tcp
 
-/** MySQL database username */
-define( 'DB_USER', 'username_here' );
+### Configure WordPress
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+1. Navigate to the WordPress directory.
 
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
-We’re interested in changing the ‘database_name_here’, ‘username_here’, ‘password_here’, and ‘localhost’ of this block of code. ‘database_name_here’, ‘username_here’, and ‘password_here’ need to be replaced with the matching values that you used when creating your database. The ‘localhost’ will need to be replaced with the IP of your database. 
+    sudo cd /var/www/html/wordpress
 
-Once these changes are made, it should resemble something like this:
+2. Within this directory, rename the Wordpress-provided sample config file to serve as the working config file.
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpress' );
+    sudo mv wp-config-sample.php wp-config.php
 
-/** MySQL database username */
-define( 'DB_USER', 'wpadmin' );
+3. Open **wp-config.php** with a text editor. Search for the following block of code in the file.
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'Password!' );
+    `// ** MySQL settings - You can get this info from your web host ** //
+    /** The name of the database for WordPress */
+    define( 'DB_NAME', 'database_name_here' );`
 
-/** MySQL hostname */
-define( 'DB_HOST', '12.34.56.78' );
-Also, add the following lines to the file as well, and replace http://example.com with your site’s URL. This will prevent you from receiving 404 not found and WordPress trying to redirect you to use your server’s IP address.
+    `/** MySQL database username */
+    define( 'DB_USER', 'username_here' );`
 
-define('WP_SITEURL', 'http://example.com');
-define('WP_HOME', 'http://example.com');
-Save the file upon exit. 
+    `/** MySQL database password */
+    define( 'DB_PASSWORD', 'password_here' );`
 
-Next, we need to enable the new site:
+    `/** MySQL hostname */
+    define( 'DB_HOST', 'localhost' );`
 
-# sudo a2ensite wordpress.domain.com.conf
-Disable the default site:
+4. Replace the values for **database_name_here**, **username_here**, and **password_here** with the matching values that you used for your database. Replace the value for **localhost** with the database's IP address. The result should look similar to the following example:
 
-# sudo a2dissite 000-default.conf
-You’ll want to test your configuration before restarting or reloading the apache2 service. This can be done with the apache2ctl command. You should get a warning about the site’s fully qualified domain name. This can be ignored. As long as you get a “Syntax OK” message, you’re good to go.
+    `// ** MySQL settings - You can get this info from your web host ** //
+    /** The name of the database for WordPress */
+    define( 'DB_NAME', 'wordpress' );`
 
-# sudo apache2ctl configtest
-Restart apache:
+    `/** MySQL database username */
+    define( 'DB_USER', 'wpadmin' );`
 
-# sudo systemctl restart apache2
+    `/** MySQL database password */
+    define( 'DB_PASSWORD', 'Password!' );`
 
-Now, when you navigate to http://your.ip.address.here/wp-admin/ you should be greeted with a WordPress login page. Enter the username of the user you created on your server and their password. You should now be passed into the WordPress Dashboard where you can begin configuring and customizing your WordPress site.
+    `/** MySQL hostname */
+    define( 'DB_HOST', '12.34.56.78' );`
+
+5. Add the following lines to the file, replacing **http://example.com** with your site’s URL to prevent a `404` error.
+
+    define('WP_SITEURL', 'http://example.com');
+    define('WP_HOME', 'http://example.com');
+
+6. Enable the new site.
+
+    sudo a2ensite wordpress.domain.com.conf
+
+7. Disable the default site.
+
+   sudo a2dissite 000-default.conf
+
+### Test the installation
+
+1. Use the apache2ctl command.
+
+    sudo apache2ctl configtest
+
+2. Restart apache.
+
+    sudo systemctl restart apache2
+
+3. Navigate to http://your.ip.address.here/wp-admin/ to see a WordPress login page.
+
+4. Enter the username and password of the user you created on your server to display the WordPress dashboard where you can configure and customize your site.
