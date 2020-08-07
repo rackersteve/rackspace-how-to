@@ -96,8 +96,16 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | [Document libraries](https://support.microsoft.com/en-us/office/what-is-a-document-library-3b5976dd-65cf-4c9e-bf5a-713c10ca2872?ui=en-us&rs=en-us&ad=us)                      | Basic Troubleshooting |   | Set up, and best practices                                                                                                         | T            | C       | E      |
 
 
-### Identity and Access Management
+### OneDrive
 
+| **Feature**                         | **Fanatical Support**     |   | **Rackspace Application Services** | **Troubleshoot** | **Consult** | **Enable** |
+|---------------------------------|-----------------------|---|--------------------------------|--------------|---------|--------|
+| [OneDrive desktop application](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage)    | Basic Troubleshooting |   | Set up, and best practices     | T            | C       | E      |
+| [Advanced Sync Settings](https://support.microsoft.com/en-us/office/how-to-access-onedrive-settings-6173f176-fd9a-4a34-88f5-5646ec6f568b)          | Basic Troubleshooting |   | Set up, and best practices     | T            | C       | E      |
+| [Sharing settings and management](https://docs.microsoft.com/en-us/onedrive/manage-sharing) | Basic Troubleshooting |   | Set up, and best practices     | T            | C       | E      |
+
+
+### Identity and Access Management
 
 | **Feature**                                                    | **Fanatical Support**     |   | **Rackspace Application Services**                                                                                                            | **Troubleshoot** | **Consult** | **Enable** |
 |------------------------------------------------------------|-----------------------|---|-------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------|--------|
@@ -107,7 +115,7 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | [Self Service Password Reset](https://docs.microsoft.com/en-us/microsoft-365/admin/add-users/let-users-reset-passwords?redirectSourcePath=%252fen-us%252farticle%252flet-users-reset-their-own-passwords-in-office-365-5bc3f460-13cc-48c0-abd6-b80bae72d04a&view=o365-worldwide)                                | Basic Troubleshooting |   | Help enabling and enabling SSPR in conjunction with on premises AD/ADFS.                                                                 | T            | C       | E      |
 | [Multifactor Authentication](https://docs.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication?redirectSourcePath=%252fen-us%252farticle%252fset-up-multi-factor-authentication-for-office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6&view=o365-worldwide)                                 | Basic Troubleshooting |   | Integration with MFA clients included in Office 365 as well as third party solutions that reside on-prem and in the cloud through ADFS. | T            | C       | E      |
 | [Microsoft Identity Manager](https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security)                                 | No Support            |   | Assistance working with MIM to integrate into a cloud based identity solution.                                                           | T            | C       | E      |
-| [Cloud App Discovery](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security)                                        | No Support            |   | Assistance integrating with additional third party applications that are in an enterprise system through Azure AD.                       | T            | C       | E      |
+| [Cloud App Security](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security)                                        | No Support            |   | Implementation, Guidance, Assistance with MCAS Features.                       | T            | C       | E      |
 | [Azure AD Connect Health](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-ad-connect-amp-connect-health-is-now-ga/ba-p/249225)                                    | No Support            |   | Guidance and support through setup, maintenance, and enablement of AADC Health for active alert monitoring.                              | T            | C       | E      |
 | [Identity Protection](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection)                                        | Basic Troubleshooting |   | Plan, design, and enable.                                                                                                                | T            | C       | E      |
 | [Privileged Identity Management](https://docs.microsoft.com/en-us/microsoft-365/compliance/privileged-access-management-overview?view=o365-worldwide)                             | No Support            |   | Just in time access, Direct (time based) access, assign roles, access review                                                            | T            | C       | E      |
@@ -127,6 +135,9 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | [Custom Templates (AIP)](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-templates)         | Basic Troubleshooting |   | Tailored template configuration, enablement, and management to suit Enterprise business needs.  | T            | C       | E      |
 | [Automated Data Classification](https://www.avepoint.com/blog/office-365/automate-classification-secure-sensitive-data-office-365-protection/)    | Basic Troubleshooting |   | Tailored solutions & guidance                                                                    | T            | C       | E      |
 | [Hold your own key](https://techcommunity.microsoft.com/t5/microsoft-security-and/azure-information-protection-with-hyok-hold-your-own-key/ba-p/249920)                | No Support            |   | Tailored solutions & guidance                                                                    | T            | C       | E      |
+| [Advanced e-Discovery](https://docs.microsoft.com/en-us/microsoft-365/compliance/overview-ediscovery-20?view=o365-worldwide)        | No Support        |   | Tailored solutions & guidance  | T            | C       | E      |
+| [Customer Lockbox](https://docs.microsoft.com/en-us/microsoft-365/compliance/customer-lockbox-requests?view=o365-worldwide)             | No Support        |   | Tailored solutions & guidance  | T            | C       | E      |
+| [Privileged Access Management](https://docs.microsoft.com/en-us/microsoft-365/compliance/privileged-access-management-overview?view=o365-worldwide) | No Support        |   | Tailored solutions & guidance  | T            | C       | E      |
 
 
 ### Device Management and Security
@@ -164,6 +175,10 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | [Federated Communication](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-external-access)    | Basic Troubleshooting |   | Assistance enabling and using.                                                                                                                           | T            | C       | E      |
 | [Security and Archiving](https://docs.microsoft.com/en-us/microsoftteams/security-compliance-overview)     | Basic Troubleshooting |   | Assistance enabling and using.                                                                                                                           | T            | C       | E      |
 | [Teams Desktop Client](https://docs.microsoft.com/en-us/microsoftteams/get-clients)       | Basic Troubleshooting |   | Tutorials, customized training, available admin and end user workshops. Project management of enablement and testing in localized customer environment. | T            | C       | E      |
+| [Phone System / Voice](https://docs.microsoft.com/en-us/microsoftteams/cloud-voice-landing-page) | No Support |   | Tailored solutions & guidance | T | C | E |
+| [Live Events](https://docs.microsoft.com/en-us/microsoftteams/quick-start-meetings-live-events)          | No Support |   | Tailored solutions & guidance | T | C | E |
+| [Teams Policies](https://docs.microsoft.com/en-us/microsoftteams/teams-policies)       | No Support |   | Tailored solutions & guidance | T | C | E |
+| [Data loss prevention](https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-microsoft-teams?view=o365-worldwide) | No Support |   | Tailored solutions & guidance | T | C | E |
 
 
 ### Windows Desktop / End-user Computing
@@ -172,6 +187,7 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | **Feature**                               | **Fanatical Support**     |   | **Rackspace Application Services**  | **Troubleshoot** | **Consult** | **Enable** |
 |---------------------------------------|-----------------------|---|---------------------------------|--------------|---------|--------|
 | [Windows Defender Anti-virus](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-in-windows-10)          | No Support            |   | Assistance enabling and using. | T            | C       | E      |
+| [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) | No Support |   | Assistance enabling and using. | T | C | E |
 | [Device Guard](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/device-guard-and-credential-guard)                          | No Support            |   | Assistance enabling and using. | T            | C       | E      |
 | [Windows Hello and Credential Guard](https://docs.microsoft.com/en-us/windows/security/identity-protection/credential-guard/credential-guard)    | No Support            |   | Assistance enabling and using. | T            | C       | E      |
 | [Delve](https://support.microsoft.com/en-us/office/what-is-office-delve-1315665a-c6af-4409-a28d-49f8916878ca?ui=en-us&rs=en-us&ad=us)                                 | Basic Troubleshooting |   | Assistance enabling and using. | T            | C       | E      |
