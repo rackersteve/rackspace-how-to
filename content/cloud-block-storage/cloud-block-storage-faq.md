@@ -5,7 +5,7 @@ title: Cloud Block Storage FAQ
 type: article
 created_date: '2015-12-10'
 created_by: Rackspace Support
-last_modified_date: '2020-03-23'
+last_modified_date: '2020-08-10'
 last_modified_by: Tyler Watson
 product: Cloud Block Storage
 product_url: cloud-block-storage
@@ -119,7 +119,7 @@ system commands available through their Cloud Server operating system:
 
 #### Is there a limit to the number, frequency or size of snapshots that can be taken on a volume?
 
-There is a limit of 5000 snapshots per volume and you can start only one
+There is a limit of 500 snapshots per volume and you can start only one
 snapshot at a time.
 
 #### Can I use a software RAID to improve the I/O performance of my SATA Cloud Block Storage volumes?
