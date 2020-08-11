@@ -15,7 +15,8 @@ Deployment Image Servicing and Management (DISM) is a Windows&reg; built-in
 command-line tool used to prepare, modify, and repair Windows system images.
 You can save images and use them to deploy and restore the Windows operating
 system. Use DISM to repair your system when it does not boot properly, when you get
-a blue screen error, or when a System File Check (SFC) does not resolve it.
+a blue screen error, or when a [System File Check (SFC)](/how-to/repair-system-files-with-system-file-check-tool/)
+does not resolve it.
 
 **Note** This task requires a user with administrative privileges on the server.
 
@@ -35,9 +36,13 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Get-CurrentEdition` | Displays current image's edition.|
   | `/Set-Edition`        | Upgrades an image to a higher edition.|
 
+<br>
+
 #### General commands
 
   | `/Optimize-Image`    | Performs specific configurations to an offline image.|
+  
+<br>
 
 #### Default association commands
 
@@ -45,6 +50,8 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Import-DefaultAppAssociations`   | Imports a set of default application associations to a Windows image. |
   | `/Get-DefaultAppAssociations`      | Displays the list of default application associations from a Windows image. |
   | `/Export-DefaultAppAssociations`   | Exports the default application associations from a running operating system. |
+  
+<br>
 
 #### AppX servicing commands
 
@@ -53,9 +60,13 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Add-ProvisionedAppxPackage`    | Adds app packages (.appx or .appxbundle) to the image and installs them for each new user.|
   | `/Get-ProvisionedAppxPackages`   | Displays information about app packages (.appx or .appxbundle) in an image that are set to install for each new user.|
 
+<br>
+
 #### Unattended servicing commands
 
   | `/Apply-Unattend`        | Applies an unattended file to an image.|
+
+<br>
 
 #### Driver servicing commands
 
@@ -64,6 +75,8 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Get-DriverInfo`        | Displays information about a specific driver in an offline image or a running operating system. |
   | `/Get-Drivers`           | Displays information about all drivers in an offline image or a running operating system. |
   | `/Export-Driver`         | Export all third-party driver packages from an offline image or a running operating system.|
+
+<br>
 
 #### International servicing commands
 
@@ -80,6 +93,8 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Set-SetupUILang`       | Defines the default language that will be used by setup. |
   | `/Get-Intl`              | Displays information about international settings and languages.|
 
+<br>
+
 #### Application servicing commands
 
   | `/Check-AppPatch`         | Displays information if the MSP patches apply to the mounted image.|
@@ -87,6 +102,8 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Get-AppPatches`         | Displays information about all applied MSP patches for all installed applications. |
   | `/Get-AppInfo`            | Displays information about a specific installed MSI application. |
   | `/Get-Apps`               | Displays information about all installed MSI applications.|
+
+<br>
 
 #### Package servicing commands
 
@@ -99,6 +116,8 @@ Press **Enter** after typing each command to check and repair a Windows 10 syste
   | `/Get-Features`           | Displays information about all  features in a package. |
   | `/Get-FeatureInfo`        | Displays information about a  specific feature. |
   | `/Cleanup-Image`          | Performs cleanup and recovery  operations on the image.|
+
+<br>
 
 For more information about these servicing commands and their arguments, specify
 ` /?` after a command, as shown in the following examples:
