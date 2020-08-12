@@ -5,8 +5,8 @@ title: Email migration services
 type: article
 created_date: '2013-07-15'
 created_by: Rackspace Support
-last_modified_date: '2020-07-08'
-last_modified_by: Stephanie Fillmon
+last_modified_date: '2020-08-06'
+last_modified_by: Brannden Evans
 product: Rackspace Email
 product_url: rackspace-email
 ---
@@ -93,7 +93,7 @@ to a new email platform, and more. Submit a request by using a ticket, and we ta
 
 | Service | Cost | Notes |How to request migration|
 | --- | --- | --- | --- |
-| **Upgrade from Exchange 2007, 2010, or 2013 to Exchange 2016** | No charge | This type of migration requires all users on the domain to migrate. | See [Upgrading to Exchange 2016](/how-to/upgrading-to-exchange-2016/) for self-scheduled Exchange upgrade instructions.|
+| **Upgrade from Exchange 2007, 2010, or 2013 to Exchange 2016** | No charge | This type of migration requires all users on the domain to migrate. | See [Upgrading your Exchange Version](/how-to/upgrading-your-exchange-version/) for self-scheduled Exchange upgrade instructions.|
 | **Platform changes** | No charge | - Convert from Rackspace Email to Microsoft Exchange and keep the same address.<br/><br/> - Convert from Exchange to Rackspace Email and keep the same address.| Submit a support ticket to request either platform change.|
 | **Domain rename** | No charge | $50 if Rackspace archiving is enabled for the domain. | Submit a support ticket requesting this service.|
 | **Hosted Exchange Mailbox rename** | No charge | [You can rename Rackspace Email  mailboxes inside your mail Control Panel.](/how-to/rename-a-rackspace-email-mailbox/) | Submit a support ticket requesting this service. |
