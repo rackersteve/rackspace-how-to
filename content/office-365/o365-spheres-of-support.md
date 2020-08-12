@@ -5,7 +5,7 @@ title: Microsoft 365 Spheres of Support
 type: article
 created_date: '2020-07-31'
 created_by: John Kowalik
-last_modified_date: '2020-08-06'
+last_modified_date: '2020-08-12'
 last_modified_by: Nicholas Ramirez
 product: Office 365
 product_url: office-365
@@ -266,6 +266,20 @@ The following article will outline Rackspace's Spheres of Support for both **Fan
 | [Planner](https://www.microsoft.com/en-us/microsoft-365/business/task-management-software)              | No Support                                         |   | Support limited to basic connectivity, installation, authentication/authorization. | T            |         |        |
 | [Whiteboard](https://www.microsoft.com/en-us/microsoft-365/microsoft-whiteboard/digital-whiteboard-app)           | No Support                                         |   | Support limited to basic connectivity, installation, authentication/authorization. | T            |         |        |
 | [Forms](https://support.microsoft.com/en-us/office/create-a-form-with-microsoft-forms-4ffb64cc-7d5d-402f-b82e-b1d49418fd9d)                | No Support                                         |   | Support limited to basic connectivity, installation, authentication/authorization. | T            |         |        |
+
+
+### Software Subscriptions
+
+
+| Feature                                  | Fanatical Support                                                                                                          |   | Rackspace Application Services | Troubleshoot | Consult | Enable |
+|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|---|--------------------------------|--------------|---------|--------|
+| SQL Server Enterprise                    | Support limited to license purchase and obtaining product keySupport limited to license purchase and obtaining product key |   | No Support                     |              |         |        |
+| SQL Server Standard                      | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
+| Windows Server Standard                  | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
+| Windows Server CAL \(User / Device\)     | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
+| Windows Server RDS CAL \(User\)          | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
+| Windows Server RMS CAL \(User / Device\) | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
+| Windows 7 Extended Security Updates      | Support limited to license purchase and obtaining product key                                                              |   | No Support                     |              |         |        |
 
 
 ### Windows Virtual Desktop
