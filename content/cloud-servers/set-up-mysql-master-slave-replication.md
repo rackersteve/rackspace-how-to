@@ -133,7 +133,8 @@ replication.
 
 
         # mysql -u root -p
-        mysql> grant replication slave on *.* TO [replication_username]@'[private IP of db02]' identified by '[some password]';
+        mysql> create user [replication_username]@'[private IP of db02]' identified by '[some password]';
+        mysql> grant replication slave on *.* TO [replication_username]@'[private IP of db02]';
         mysql> flush privileges;
         mysql> quit
 
