@@ -11,7 +11,7 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
-**Note: This article replaces master/slave nomenclature with primary/replica.
+**Note**: This article replaces master/slave nomenclature with primary/replica.
 
 Primary/replica data replication enables you to copy replicated data to
 multiple computers for backup and analysis by multiple parties. You should submit
