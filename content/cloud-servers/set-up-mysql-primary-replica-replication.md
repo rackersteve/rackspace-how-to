@@ -1,7 +1,7 @@
 ---
-permalink: set-up-mysql-master-slave-replication/
+permalink: set-up-mysql-primary-replica-replication/
 audit_date: '2019-09-06'
-title: Set up MySQL master-slave replication
+title: Set up MySQL primary-replica replication
 type: article
 created_date: '2011-06-02'
 created_by: Rackspace Support
@@ -11,14 +11,16 @@ product: Cloud Servers
 product_url: cloud-servers
 ---
 
-Master-slave data replication allows for replicated data to be copied to
-multiple computers for backup and analysis by multiple parties. Needed
-changes identified by a group member must to be submitted to the
-designated "master" of the node. This differs from [Master-Master
-replication](/how-to/mysql-master-master-replication),
-in which data can be updated by any authorized contributor of the group.
+**Note**: This article replaces master/slave nomenclature with primary/replica.
 
-This article provides steps for setting up MySQL&reg; master-slave database
+Primary/replica data replication enables you to copy replicated data to
+multiple computers for backup and analysis by multiple parties. You should submit
+necessary changes identified by a group member to the
+designated primary of the node. This differs from [Primary-Primary
+replication](/how-to/mysql-master-master-replication),
+in which any authorized contributor of the group can update data.
+
+This article provides steps for setting up MySQL&reg; primary-replica database
 replication between two cloud servers. The operating system used for the
 examples in the article is CentOS&reg; 6, built from a Rackspace Cloud
 Servers base image.
@@ -29,14 +31,14 @@ The steps in this article use two cloud servers, `db01` and `db02`.
 Cloud servers have two IP addresses (one public, one private). The
 examples demonstrate configuring replication over the private IP
 interface so that no bandwidth charges are incurred. For the duration of
-the article, `db01` is considered the *master* MySQL server (running in
-read-write mode), and `db02` is considered the *slave* server (running in
+the article, `db01` is considered the *primary* MySQL server (running in
+read-write mode), and `db02` is considered the *replica* server (running in
 read-only mode).
 
-If you already have a MySQL database running on the master node, a dump
-and restore into the slave node is required before configuring
+If you already have a MySQL database running on the primary node, a dump
+and restore into the replica node is required before configuring
 replication between them. You use the `mysqldump` command to dump a
-database into a file, then transfer it and restore it to the slave.
+database into a file, then transfer it and restore it to the replica.
 After the necessary configuration has been performed, replication is in
 effect. For more information, see the [Configure replication](#configure-replication)
 section.
@@ -124,16 +126,18 @@ enable replication.
 
 ### Configure replication
 
-A MySQL user is required on the master server (`db01`) to be used for
+A MySQL user is required on the primary server (`db01`) to be used for
 replication.
 
 1.  Run the following commands to set up the MySQL user, updating the
     entries in brackets with strings or values that you plan to use
     with your setup:
 
+    **Note:** You might not need to create the user in the follow code.
 
         # mysql -u root -p
-        mysql> grant replication slave on *.* TO [replication_username]@'[private IP of db02]' identified by '[some password]';
+        mysql> create user [replication_username]@'[private IP of db02]' identified by '[some password]';
+        mysql> grant replication slave on *.* TO [replication_username]@'[private IP of db02]';
         mysql> flush privileges;
         mysql> quit
 
@@ -151,14 +155,14 @@ replication.
 
         #service mysqld restart
 
-    Before starting replication, the data on the master
-    and slave servers must be the same. To accomplish this duplication, dump
-    the data from the master (`db01`) server and add it to the
-    slave (`db02`) server.
+    Before starting replication, the data on the primary
+    and replica servers must be the same. To accomplish this duplication, dump
+    the data from the primary (`db01`) server and add it to the
+    replica (`db02`) server.
 
 4.  Use the following command to ensure that nothing can write to the
-    master database during a database dump: Also note the filename and
-    position of the binary log because you will need these values to
+    primary database during a database dump: Also note the filename and
+    position of the binary log because you need these values to
     complete the replication configuration on db02.
 
 
@@ -178,17 +182,16 @@ replication.
 
 5.  Perform a database dump by using `mysqldump` as follows:
 
-
         # mysqldump -u root -p --databases [database-1] [database-2] ...  > /root/db_dump.sql
 
 6.  After the database dump has completed, lift the read lock from the
-    master (`db01`):
+    primary (`db01`):
 
 
         # mysql -u root -p
         mysql> UNLOCK TABLES;
 
-7.  Copy the database dump file to the slave server so that it can
+7.  Copy the database dump file to the replica server so that it can
     be restored by using the following command:
 
 
@@ -212,8 +215,7 @@ replication.
         # mysql -u root -p < /root/db_dump.sql
         # service mysqld restart
 
-10. Complete the slave replication steps:
-
+10. Complete the replica replication steps:
 
         # mysql -u root -p
         mysql> SLAVE STOP;
@@ -226,18 +228,17 @@ replication.
         mysql> SHOW SLAVE STATUS\G
 
     **Note:** The **Slave\_IO\_State** field should show "Waiting for master to
-    send event". If it shows "Connecting to Master" please check your
-    MySQL log file. By default it is **/var/log/mysqld.log**
-    but it may be configured differently on your system. As
-    always, **/etc/my.cnf** will define the location of your
-    log file.
+    send event". If it shows "Connecting to Master", check your
+    MySQL log file. By default, it is **/var/log/mysqld.log**,
+    but it might be configured differently on your system. As
+    always, **/etc/my.cnf** defines the location of your log file.
 
 ### Test replication
 
 To test the replication setup, create a new database and associated
-table on `db01`, and insert data to confirm that the changes are mirrored
+table on `db01` and insert data to confirm that the changes are mirrored
 on `db02`. In the following example, the new database is named
-**testing** and the new table is named **users**:
+**testing**, and the new table is named **users**:
 
 
     # mysql -u root -p
@@ -248,4 +249,4 @@ on `db02`. In the following example, the new database is named
     mysql> insert into users (username) values ('bar');
     mysql> exit
 
-The changes should be visible on `db02` immediately.
+You should see the changes on `db02` immediately.
